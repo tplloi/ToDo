@@ -5,12 +5,14 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <ImageView
-        android:layout_width="@dimen/w_150"
-        android:layout_height="@dimen/w_150"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_launcher_playstore" />
+        android:text="D"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/txt_100" />
 
     <com.wang.avi.AVLoadingIndicatorView
         android:id="@+id/indicatorView"
