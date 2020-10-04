@@ -8,7 +8,6 @@ import com.annotation.LogTag
 import com.core.base.BaseApplication
 import com.core.base.BaseFragment
 import com.loitp.R
-import com.loitp.app.LApplication
 import com.loitp.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.frm_home.*
 
@@ -40,6 +39,7 @@ class HomeFragment : BaseFragment() {
 
             mvm.listChapLiveData.observe(viewLifecycleOwner, Observer { listChap ->
                 logD("<<<listChapLiveData " + BaseApplication.gson.toJson(listChap))
+                tvTest.visibility = View.VISIBLE
             })
         }
 
