@@ -7,6 +7,16 @@
     android:background="@color/colorPrimary">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/copyright"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_medium" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
