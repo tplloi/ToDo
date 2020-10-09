@@ -12,6 +12,7 @@ import com.annotation.LayoutId
 import com.annotation.LogTag
 import com.core.base.BaseFontActivity
 import com.core.common.Constants
+import com.core.helper.adhelper.AdHelperActivity
 import com.core.helper.gallery.GalleryCoreSplashActivity
 import com.core.utilities.*
 import com.google.android.material.navigation.NavigationView
@@ -97,16 +98,21 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                 LScreenUtil.addFragment(this, R.id.flContainer, HomeFragment(), false)
             }
             R.id.navGallery -> {
-//                val intent = Intent(this, GalleryCoreSplashActivity::class.java)
-//                intent.putExtra(Constants.AD_UNIT_ID_BANNER, getString(R.string.str_b))
-//                intent.putExtra(Constants.BKG_SPLASH_SCREEN, getString(R.string.link_cover))
-//                intent.putExtra(Constants.BKG_ROOT_VIEW, R.drawable.bkg_black)
-//                //neu muon remove albumn nao thi cu pass id cua albumn do
-//                val removeAlbumFlickrList = ArrayList<String>()
-//                removeAlbumFlickrList.add(Constants.FLICKR_ID_STICKER)
-//                intent.putStringArrayListExtra(Constants.KEY_REMOVE_ALBUM_FLICKR_LIST, removeAlbumFlickrList)
-//                startActivity(intent)
-//                LActivityUtil.tranIn(this)
+                if (Constants.IS_DEBUG) {
+                    val intent = Intent(this, GalleryCoreSplashActivity::class.java)
+                    intent.putExtra(Constants.AD_UNIT_ID_BANNER, getString(R.string.str_b))
+                    intent.putExtra(Constants.BKG_SPLASH_SCREEN, getString(R.string.link_cover))
+                    intent.putExtra(Constants.BKG_ROOT_VIEW, R.drawable.bkg_black)
+                    //neu muon remove albumn nao thi cu pass id cua albumn do
+                    val removeAlbumFlickrList = ArrayList<String>()
+                    removeAlbumFlickrList.add(Constants.FLICKR_ID_STICKER)
+                    intent.putStringArrayListExtra(Constants.KEY_REMOVE_ALBUM_FLICKR_LIST, removeAlbumFlickrList)
+                    startActivity(intent)
+                    LActivityUtil.tranIn(this)
+                }
+            }
+            R.id.navGallery18 -> {
+                //TODO
             }
             R.id.navRateApp -> {
                 LSocialUtil.rateApp(activity = this, packageName = packageName)
@@ -122,6 +128,13 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
             }
             R.id.navPolicy -> {
                 LSocialUtil.openBrowserPolicy(context = this)
+            }
+            R.id.navAd -> {
+                val intent = Intent(this, AdHelperActivity::class.java)
+                intent.putExtra(Constants.AD_HELPER_IS_ENGLISH_LANGUAGE, true)
+                intent.putExtra(Constants.IS_DARK_THEME, true)
+                startActivity(intent)
+                LActivityUtil.tranIn(this)
             }
         }
 
