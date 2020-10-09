@@ -120,6 +120,9 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
             R.id.navShareApp -> {
                 LSocialUtil.shareApp(this)
             }
+            R.id.navPolicy -> {
+                LSocialUtil.openBrowserPolicy(context = this)
+            }
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)

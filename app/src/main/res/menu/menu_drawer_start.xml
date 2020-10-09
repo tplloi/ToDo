@@ -16,7 +16,7 @@
         <item
             android:id="@+id/navGallery18"
             android:icon="@drawable/ic_insert_photo_black_48dp"
-            android:title="@string/gallery" />
+            android:title="@string/gallery_18" />
 
         <item
             android:id="@+id/navRateApp"
@@ -32,8 +32,16 @@
             android:title="@string/facebook_fanpage" />
         <item
             android:id="@+id/navShareApp"
-            android:icon="@drawable/ic_email_black_48dp"
+            android:icon="@drawable/ic_share_black_48dp"
             android:title="@string/share_app" />
+<!--        <item-->
+<!--            android:id="@+id/navAd"-->
+<!--            android:icon="@drawable/"-->
+<!--            android:title="@string/share_app" />-->
+        <item
+            android:id="@+id/navPolicy"
+            android:icon="@drawable/ic_edit_black_48dp"
+            android:title="@string/policy" />
     </group>
 
 </menu>
