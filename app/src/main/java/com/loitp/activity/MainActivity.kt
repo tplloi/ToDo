@@ -160,7 +160,6 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                 LActivityUtil.tranIn(this)
             }
             R.id.navDonation -> {
-                //TODO dark theme
                 currentItemId = R.id.navDonation
                 LScreenUtil.replaceFragment(this, R.id.flContainer, FrmDonate(), false)
             }
