@@ -7,17 +7,14 @@
             android:id="@+id/navHome"
             android:icon="@drawable/ic_home_black_48dp"
             android:title="@string/home" />
-
         <item
             android:id="@+id/navGallery"
             android:icon="@drawable/ic_insert_photo_black_48dp"
             android:title="@string/gallery" />
-
         <item
             android:id="@+id/navGallery18"
             android:icon="@drawable/ic_insert_photo_black_48dp"
             android:title="@string/gallery_18" />
-
         <item
             android:id="@+id/navRateApp"
             android:icon="@drawable/ic_rate_review_black_48dp"
@@ -31,6 +28,10 @@
             android:icon="@drawable/ic_account_circle_black_48dp"
             android:title="@string/facebook_fanpage" />
         <item
+            android:id="@+id/navChatWithDev"
+            android:icon="@drawable/ic_chat_black_48dp"
+            android:title="@string/chat_with_dev" />
+        <item
             android:id="@+id/navShareApp"
             android:icon="@drawable/ic_share_black_48dp"
             android:title="@string/share_app" />
@@ -42,6 +43,10 @@
             android:id="@+id/navPolicy"
             android:icon="@drawable/ic_edit_black_48dp"
             android:title="@string/policy" />
+        <item
+            android:id="@+id/navDonation"
+            android:icon="@drawable/baseline_favorite_black_24dp"
+            android:title="@string/donation" />
     </group>
 
 </menu>

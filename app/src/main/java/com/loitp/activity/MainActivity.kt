@@ -13,6 +13,7 @@ import com.annotation.LogTag
 import com.core.base.BaseFontActivity
 import com.core.common.Constants
 import com.core.helper.adhelper.AdHelperActivity
+import com.core.helper.donate.FrmDonate
 import com.core.helper.gallery.GalleryCoreSplashActivity
 import com.core.helper.girl.ui.GirlSplashActivity
 import com.core.utilities.*
@@ -92,11 +93,13 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         }
     }
 
+    private var currentItemId = R.id.navHome
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.navHome -> {
                 logD("onNavigationItemSelected navHome")
-                LScreenUtil.addFragment(this, R.id.flContainer, HomeFragment(), false)
+                currentItemId = R.id.navHome
+                LScreenUtil.replaceFragment(this, R.id.flContainer, HomeFragment(), false)
             }
             R.id.navGallery -> {
                 if (Constants.IS_DEBUG) {
@@ -137,6 +140,9 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
             R.id.navFacebookFanPage -> {
                 LSocialUtil.likeFacebookFanpage(this)
             }
+            R.id.navChatWithDev -> {
+                LSocialUtil.chatMessenger(this)
+            }
             R.id.navShareApp -> {
                 LSocialUtil.shareApp(this)
             }
@@ -150,11 +156,19 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                 startActivity(intent)
                 LActivityUtil.tranIn(this)
             }
+            R.id.navDonation -> {
+                currentItemId = R.id.navDonation
+                LScreenUtil.replaceFragment(this, R.id.flContainer, FrmDonate(), false)
+            }
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
         navViewStart.postDelayed({
-            navViewStart.menu.findItem(R.id.navHome).isChecked = true//hight light navViewStart menu home
+            if (currentItemId == R.id.navHome) {
+                navViewStart.menu.findItem(R.id.navHome).isChecked = true
+            } else if (currentItemId == R.id.navDonation) {
+                navViewStart.menu.findItem(R.id.navDonation).isChecked = true
+            }
         }, 500)
         return true
     }

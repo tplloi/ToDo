@@ -32,5 +32,7 @@
     <string name="exit">Exit</string>
     <string name="try_again">Try again</string>
     <string name="right_drawer">Right Drawer</string>
+    <string name="chat_with_dev">Chat with dev</string>
+    <string name="donation">Donation</string>
 
 </resources>
