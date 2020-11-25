@@ -6,7 +6,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import com.annotation.LayoutId
 import com.annotation.LogTag
 import com.core.base.BaseApplication
 import com.core.base.BaseFontActivity
@@ -20,17 +19,19 @@ import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.loitp.BuildConfig
 import com.loitp.R
-import com.loitp.app.LApplication
 import com.model.GG
 import kotlinx.android.synthetic.main.activity_splash.*
 import okhttp3.Call
 
-@LayoutId(R.layout.activity_splash)
 @LogTag("SplashActivity")
 class SplashActivity : BaseFontActivity() {
     private var isAnimDone = false
     private var isCheckReadyDone = false
     private var isShowDialogCheck = false
+
+    override fun setLayoutResourceId(): Int {
+        return R.layout.activity_splash
+    }
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,7 +56,7 @@ class SplashActivity : BaseFontActivity() {
 
     private fun checkPermission() {
         isShowDialogCheck = true
-        Dexter.withActivity(this)
+        Dexter.withContext(this)
                 .withPermissions(
                         Manifest.permission.WRITE_EXTERNAL_STORAGE,
                         Manifest.permission.ACCESS_FINE_LOCATION

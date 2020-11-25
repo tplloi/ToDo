@@ -31,8 +31,5 @@ class LApplication : BaseApplication() {
 
         //config font
         LUIUtil.fontForAll = Constants.FONT_PATH
-
-        //set dark theme
-        LSharedPrefsUtil.instance.putBoolean(Constants.KEY_IS_DARK_THEME, true)
     }
 }
