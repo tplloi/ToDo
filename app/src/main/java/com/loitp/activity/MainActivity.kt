@@ -18,6 +18,7 @@ import com.core.helper.gallery.GalleryCoreSplashActivity
 import com.core.helper.mup.girl.ui.GirlSplashActivity
 import com.core.utilities.*
 import com.google.android.material.navigation.NavigationView
+import com.loitp.BuildConfig
 import com.loitp.R
 import com.loitp.fragment.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -109,7 +110,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                 LScreenUtil.replaceFragment(this, R.id.flContainer, HomeFragment(), false)
             }
             R.id.navGallery -> {
-                if (Constants.IS_DEBUG) {
+                if (BuildConfig.DEBUG) {
                     val intent = Intent(this, GalleryCoreSplashActivity::class.java)
                     intent.putExtra(Constants.AD_UNIT_ID_BANNER, getString(R.string.str_b))
                     intent.putExtra(Constants.BKG_SPLASH_SCREEN, getString(R.string.link_cover))
@@ -123,7 +124,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                 }
             }
             R.id.navGallery18 -> {
-                if (Constants.IS_DEBUG) {
+                if (BuildConfig.DEBUG) {
                     val intent = Intent(this, GirlSplashActivity::class.java)
                     intent.putExtra(Constants.AD_UNIT_ID_BANNER, getString(R.string.str_b))
 
