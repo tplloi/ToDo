@@ -20,7 +20,9 @@
         android:id="@+id/btGithub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/clock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium"
         android:background="?attr/themeBackgroundColor"
         android:paddingStart="@dimen/padding_medium"
         android:paddingEnd="@dimen/padding_medium"
@@ -29,4 +31,10 @@
         android:textSize="@dimen/text_medium"
         android:visibility="gone"
         tools:visibility="visible" />
+
+    <AnalogClock
+        android:id="@+id/clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
 </RelativeLayout>
