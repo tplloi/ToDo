@@ -16,13 +16,16 @@
         app:indicatorColor="@color/white"
         app:indicatorName="PacmanIndicator" />
 
-    <TextView
-        android:id="@+id/tvTest"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btGithub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
+        android:background="?attr/themeBackgroundColor"
+        android:paddingStart="@dimen/padding_medium"
+        android:paddingEnd="@dimen/padding_medium"
+        android:text="@string/check_out"
+        android:textColor="?attr/themeTextColor"
         android:textSize="@dimen/text_medium"
         android:visibility="gone"
         tools:visibility="visible" />
