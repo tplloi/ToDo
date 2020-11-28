@@ -34,5 +34,6 @@
     <string name="right_drawer">Right Drawer</string>
     <string name="chat_with_dev">Chat with dev</string>
     <string name="donation">Donation</string>
+    <string name="check_out">Check out</string>
 
 </resources>
