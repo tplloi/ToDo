@@ -10,8 +10,6 @@ import com.annotation.LogTag
 import com.core.base.BaseApplication
 import com.core.base.BaseFontActivity
 import com.core.utilities.*
-import com.interfaces.Callback2
-import com.interfaces.GGCallback
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -93,9 +91,7 @@ class SplashActivity : BaseFontActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             LActivityUtil.tranIn(this)
-            LUIUtil.setDelay(mls = 1000, runnable = Runnable {
-                finish()
-            })
+            this.finishAfterTransition()
         }
     }
 
@@ -106,18 +102,15 @@ class SplashActivity : BaseFontActivity() {
                 msg = getString(R.string.need_permisson_to_use_app),
                 button1 = getString(R.string.setting),
                 button2 = getString(R.string.deny),
-                callback2 = object : Callback2 {
-                    override fun onClick1() {
-                        isShowDialogCheck = false
-                        val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
-                        val uri = Uri.fromParts("package", packageName, null)
-                        intent.data = uri
-                        startActivityForResult(intent, 101)
-                    }
-
-                    override fun onClick2() {
-                        onBackPressed()
-                    }
+                onClickButton1 = {
+                    isShowDialogCheck = false
+                    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                    val uri = Uri.fromParts("package", packageName, null)
+                    intent.data = uri
+                    startActivityForResult(intent, 101)
+                },
+                onClickButton2 = {
+                    onBackPressed()
                 })
         alertDialog.setCancelable(false)
     }
@@ -129,14 +122,11 @@ class SplashActivity : BaseFontActivity() {
                 msg = getString(R.string.need_permisson_to_use_app),
                 button1 = getString(R.string.yes),
                 button2 = getString(R.string.deny),
-                callback2 = object : Callback2 {
-                    override fun onClick1() {
-                        checkPermission()
-                    }
-
-                    override fun onClick2() {
-                        onBackPressed()
-                    }
+                onClickButton1 = {
+                    checkPermission()
+                },
+                onClickButton2 = {
+                    onBackPressed()
                 })
         alertDialog.setCancelable(false)
     }
@@ -153,15 +143,13 @@ class SplashActivity : BaseFontActivity() {
                     msg = title,
                     button1 = getString(R.string.exit),
                     button2 = getString(R.string.try_again),
-                    callback2 = object : Callback2 {
-                        override fun onClick1() {
-                            onBackPressed()
-                        }
-
-                        override fun onClick2() {
-                            checkReady()
-                        }
-                    })
+                    onClickButton1 = {
+                        onBackPressed()
+                    },
+                    onClickButton2 = {
+                        checkReady()
+                    }
+            )
             alertDial.setCancelable(false)
         }
     }
@@ -182,33 +170,30 @@ class SplashActivity : BaseFontActivity() {
         val linkGGDriveCheckReady = getString(R.string.link_gg_drive)
         LStoreUtil.getTextFromGGDrive(
                 linkGGDrive = linkGGDriveCheckReady,
-                ggCallback = object : GGCallback {
-                    override fun onGGFailure(call: Call, e: Exception) {
-                        e.printStackTrace()
+                onGGFailure = { _: Call, e: Exception ->
+                    e.printStackTrace()
+                    showDialogNotReady()
+                },
+                onGGResponse = { listGG: ArrayList<GG> ->
+                    logD("getGG listGG: -> " + BaseApplication.gson.toJson(listGG))
+
+                    fun isReady(): Boolean {
+                        listGG.forEach { gg ->
+                            if (packageName == gg.pkg) {
+                                return gg.isReady
+                            }
+                        }
+                        return false
+                    }
+
+                    val isReady = true // return true for demo
+                    if (isReady) {
+                        LPrefUtil.setCheckAppReady(value = true)
+                        setReady()
+                    } else {
                         showDialogNotReady()
                     }
-
-                    override fun onGGResponse(listGG: ArrayList<GG>) {
-                        logD("getGG listGG: -> " + BaseApplication.gson.toJson(listGG))
-
-                        fun isReady(): Boolean {
-                            listGG.forEach { gg ->
-                                if (packageName == gg.pkg) {
-                                    return gg.isReady
-                                }
-                            }
-                            return false
-                        }
-
-//                        val isReady = isReady()
-                        val isReady = true // return true for demo
-                        if (isReady) {
-                            LPrefUtil.setCheckAppReady(value = true)
-                            setReady()
-                        } else {
-                            showDialogNotReady()
-                        }
-                    }
-                })
+                }
+        )
     }
 }

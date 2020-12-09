@@ -9,8 +9,6 @@ import com.data.ActivityData
 import com.data.AdmobData
 import com.loitp.R
 
-//TODO debug const
-
 //done
 //TODO id admob
 //TODO link link_cover string
