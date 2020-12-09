@@ -10,7 +10,6 @@ import com.data.AdmobData
 import com.loitp.R
 
 //done
-//TODO id admob
 //TODO link link_cover string
 
 @LogTag("LApplication")
