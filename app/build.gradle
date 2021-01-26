@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion '30.0.2'
+    buildToolsVersion '30.0.3'
 
     defaultConfig {
         applicationId "loitp93.basemaster.demo"
@@ -58,7 +58,7 @@ android {
 
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "BaseMaster_" + buildType.name + "_" + defaultConfig.versionName + "_" + defaultConfig.versionCode + ".apk"
+            outputFileName = "BaseMasterDemo_" + buildType.name + "_" + defaultConfig.versionName + "_" + defaultConfig.versionCode + ".apk"
         }
     }
 
@@ -78,7 +78,7 @@ repositories {
 }
 
 dependencies {
-    api 'com.github.tplloi:basemaster:4.4.31'
+    api 'com.github.tplloi:basemaster:4.4.38'
 
     //https://github.com/shiburagi/Drawer-Behavior
     api 'com.infideap.drawerbehavior:drawer-behavior:1.0.1'
