@@ -27,7 +27,5 @@ class LApplication : BaseApplication() {
 
         //config font
         LUIUtil.fontForAll = Constants.FONT_PATH
-
-        LUIUtil.setDarkTheme(isDarkTheme = false)
     }
 }
