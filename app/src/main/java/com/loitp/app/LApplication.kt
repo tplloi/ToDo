@@ -11,6 +11,7 @@ import com.loitp.R
 
 //done
 //TODO link link_cover string
+//TODO change admob
 
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
@@ -26,5 +27,7 @@ class LApplication : BaseApplication() {
 
         //config font
         LUIUtil.fontForAll = Constants.FONT_PATH
+
+        LUIUtil.setDarkTheme(isDarkTheme = false)
     }
 }
