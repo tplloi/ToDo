@@ -10,6 +10,8 @@ import com.annotation.LogTag
 import com.core.base.BaseApplication
 import com.core.base.BaseFontActivity
 import com.core.utilities.*
+import com.interfaces.Callback2
+import com.interfaces.GGCallback
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -91,9 +93,7 @@ class SplashActivity : BaseFontActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             LActivityUtil.tranIn(this)
-            LUIUtil.setDelay(mls = 1000, runnable = Runnable {
-                finish()
-            })
+            this.finishAfterTransition()
         }
     }
 
