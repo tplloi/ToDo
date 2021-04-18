@@ -10,8 +10,6 @@ import com.annotation.LogTag
 import com.core.base.BaseApplication
 import com.core.base.BaseFontActivity
 import com.core.utilities.*
-import com.interfaces.Callback2
-import com.interfaces.GGCallback
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -174,7 +172,7 @@ class SplashActivity : BaseFontActivity() {
         val linkGGDriveCheckReady = getString(R.string.link_gg_drive)
         LStoreUtil.getTextFromGGDrive(
             linkGGDrive = linkGGDriveCheckReady,
-            onGGFailure = { call: Call, e: Exception ->
+            onGGFailure = { _: Call, e: Exception ->
                 e.printStackTrace()
                 showDialogNotReady()
             },
