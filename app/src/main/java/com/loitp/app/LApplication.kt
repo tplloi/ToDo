@@ -9,7 +9,6 @@ import com.data.ActivityData
 import com.data.AdmobData
 import com.loitp.R
 
-//TODO setting dark mode
 //done
 //TODO link link_cover string
 //TODO change admob
