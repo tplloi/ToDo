@@ -21,6 +21,7 @@ import com.google.android.material.navigation.NavigationView
 import com.loitp.BuildConfig
 import com.loitp.R
 import com.loitp.fragment.HomeFragment
+import com.loitp.fragment.SettingFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.view_drawer_end.*
 import kotlinx.android.synthetic.main.view_drawer_main.*
@@ -44,11 +45,11 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         setSupportActionBar(toolbar)
 
         val toggle = ActionBarDrawerToggle(
-                this,
-                drawerLayout,
-                toolbar,
-                R.string.navigation_drawer_open,
-                R.string.navigation_drawer_close
+            this,
+            drawerLayout,
+            toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -57,7 +58,11 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         drawerLayout.useCustomBehavior(Gravity.END)
 
         //cover
-        LImageUtil.load(context = this, any = getString(R.string.link_cover), imageView = navViewStart.getHeaderView(0).ivCover)
+        LImageUtil.load(
+            context = this,
+            any = getString(R.string.link_cover),
+            imageView = navViewStart.getHeaderView(0).ivCover
+        )
 
         tvAd.text = LStoreUtil.readTxtFromRawFolder(nameOfRawFile = R.raw.ad)
 
@@ -109,6 +114,10 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                 currentItemId = R.id.navHome
                 LScreenUtil.replaceFragment(this, R.id.flContainer, HomeFragment(), false)
             }
+            R.id.navSetting -> {
+                currentItemId = R.id.navSetting
+                LScreenUtil.replaceFragment(this, R.id.flContainer, SettingFragment(), false)
+            }
             R.id.navGallery -> {
                 if (BuildConfig.DEBUG) {
                     val intent = Intent(this, GalleryCoreSplashActivity::class.java)
@@ -118,7 +127,10 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                     //neu muon remove albumn nao thi cu pass id cua albumn do
                     val removeAlbumFlickrList = ArrayList<String>()
                     removeAlbumFlickrList.add(Constants.FLICKR_ID_STICKER)
-                    intent.putStringArrayListExtra(Constants.KEY_REMOVE_ALBUM_FLICKR_LIST, removeAlbumFlickrList)
+                    intent.putStringArrayListExtra(
+                        Constants.KEY_REMOVE_ALBUM_FLICKR_LIST,
+                        removeAlbumFlickrList
+                    )
                     startActivity(intent)
                     LActivityUtil.tranIn(this)
                 }
@@ -168,7 +180,12 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
             }
             R.id.navDonation -> {
                 currentItemId = R.id.navDonation
-                LScreenUtil.replaceFragment(activity = this, containerFrameLayoutIdRes = R.id.flContainer, fragment = FrmDonate(), isAddToBackStack = false)
+                LScreenUtil.replaceFragment(
+                    activity = this,
+                    containerFrameLayoutIdRes = R.id.flContainer,
+                    fragment = FrmDonate(),
+                    isAddToBackStack = false
+                )
             }
         }
 
@@ -176,6 +193,8 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         navViewStart.postDelayed({
             if (currentItemId == R.id.navHome) {
                 navViewStart.menu.findItem(R.id.navHome).isChecked = true
+            } else if (currentItemId == R.id.navSetting) {
+                navViewStart.menu.findItem(R.id.navSetting).isChecked = true
             } else if (currentItemId == R.id.navDonation) {
                 navViewStart.menu.findItem(R.id.navDonation).isChecked = true
             }

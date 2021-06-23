@@ -8,6 +8,10 @@
             android:icon="@drawable/ic_home_black_48dp"
             android:title="@string/home" />
         <item
+            android:id="@+id/navSetting"
+            android:icon="@drawable/ic_settings_black_48dp"
+            android:title="@string/setting" />
+        <item
             android:id="@+id/navGallery"
             android:icon="@drawable/ic_insert_photo_black_48dp"
             android:title="@string/gallery" />
