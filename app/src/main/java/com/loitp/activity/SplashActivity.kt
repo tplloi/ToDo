@@ -6,6 +6,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
+import com.annotation.IsFullScreen
 import com.annotation.LogTag
 import com.core.base.BaseApplication
 import com.core.base.BaseFontActivity
@@ -22,6 +23,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
 import okhttp3.Call
 
 @LogTag("SplashActivity")
+@IsFullScreen(true)
 class SplashActivity : BaseFontActivity() {
     private var isAnimDone = false
     private var isCheckReadyDone = false
