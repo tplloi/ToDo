@@ -152,7 +152,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                 }
             }
             R.id.navGallery18Feed -> {
-                LSocialUtil.openUrlInBrowser(context = this, url = Constants.URL_GIRL)
+//                LSocialUtil.openUrlInBrowser(context = this, url = Constants.URL_GIRL)
             }
             R.id.navRateApp -> {
                 LSocialUtil.rateApp(activity = this, packageName = packageName)
