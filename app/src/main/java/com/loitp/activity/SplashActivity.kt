@@ -10,7 +10,7 @@ import com.annotation.IsFullScreen
 import com.annotation.LogTag
 import com.core.base.BaseApplication
 import com.core.base.BaseFontActivity
-import com.core.utilities.*
+import com.core.utilities.* // ktlint-disable no-wildcard-imports
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
 import okhttp3.Call
 
 @LogTag("SplashActivity")
-@IsFullScreen(true)
+@IsFullScreen(false)
 class SplashActivity : BaseFontActivity() {
     private var isAnimDone = false
     private var isCheckReadyDone = false
@@ -37,10 +37,13 @@ class SplashActivity : BaseFontActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        LUIUtil.setDelay(mls = 1500, runnable = Runnable {
-            isAnimDone = true
-            goToHome()
-        })
+        LUIUtil.setDelay(
+            mls = 1500,
+            runnable = Runnable {
+                isAnimDone = true
+                goToHome()
+            }
+        )
         textViewVersion.text = "Version ${BuildConfig.VERSION_NAME}"
         tvPolicy.setOnClickListener {
             LSocialUtil.openBrowserPolicy(context = this)
@@ -142,7 +145,8 @@ class SplashActivity : BaseFontActivity() {
             } else {
                 getString(R.string.check_ur_connection)
             }
-            val alertDial = LDialogUtil.showDialog2(context = this,
+            val alertDial = LDialogUtil.showDialog2(
+                context = this,
                 title = getString(R.string.warning),
                 msg = title,
                 button1 = getString(R.string.exit),
@@ -191,7 +195,7 @@ class SplashActivity : BaseFontActivity() {
                 }
 
 //              val isReady = isReady()
-                //TODO loitpp
+                // TODO loitpp
                 val isReady = true // return true for demo
                 if (isReady) {
                     LPrefUtil.setCheckAppReady(value = true)

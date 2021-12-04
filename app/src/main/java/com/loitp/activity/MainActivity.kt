@@ -13,10 +13,9 @@ import com.annotation.LogTag
 import com.core.base.BaseFontActivity
 import com.core.common.Constants
 import com.core.helper.adhelper.AdHelperActivity
-import com.core.helper.donate.FrmDonate
 import com.core.helper.gallery.GalleryCoreSplashActivity
 import com.core.helper.mup.girl.ui.GirlSplashActivity
-import com.core.utilities.*
+import com.core.utilities.* // ktlint-disable no-wildcard-imports
 import com.google.android.material.navigation.NavigationView
 import com.loitp.BuildConfig
 import com.loitp.R
@@ -57,7 +56,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         drawerLayout.useCustomBehavior(Gravity.START)
         drawerLayout.useCustomBehavior(Gravity.END)
 
-        //cover
+        // cover
         LImageUtil.load(
             context = this,
             any = getString(R.string.link_cover),
@@ -124,7 +123,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                     intent.putExtra(Constants.AD_UNIT_ID_BANNER, getString(R.string.str_b))
                     intent.putExtra(Constants.BKG_SPLASH_SCREEN, getString(R.string.link_cover))
                     intent.putExtra(Constants.BKG_ROOT_VIEW, R.drawable.bkg_black)
-                    //neu muon remove albumn nao thi cu pass id cua albumn do
+                    // neu muon remove albumn nao thi cu pass id cua albumn do
                     val removeAlbumFlickrList = ArrayList<String>()
                     removeAlbumFlickrList.add(Constants.FLICKR_ID_STICKER)
                     intent.putStringArrayListExtra(
@@ -178,15 +177,6 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                 startActivity(intent)
                 LActivityUtil.tranIn(this)
             }
-            R.id.navDonation -> {
-                currentItemId = R.id.navDonation
-                LScreenUtil.replaceFragment(
-                    activity = this,
-                    containerFrameLayoutIdRes = R.id.flContainer,
-                    fragment = FrmDonate(),
-                    isAddToBackStack = false
-                )
-            }
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
@@ -195,8 +185,6 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                 navViewStart.menu.findItem(R.id.navHome).isChecked = true
             } else if (currentItemId == R.id.navSetting) {
                 navViewStart.menu.findItem(R.id.navSetting).isChecked = true
-            } else if (currentItemId == R.id.navDonation) {
-                navViewStart.menu.findItem(R.id.navDonation).isChecked = true
             }
         }, 500)
         return true

@@ -3,15 +3,14 @@ package com.loitp.app
 import com.annotation.LogTag
 import com.core.base.BaseApplication
 import com.core.common.Constants
-import com.core.utilities.LSharedPrefsUtil
 import com.core.utilities.LUIUtil
 import com.data.ActivityData
 import com.data.AdmobData
 import com.loitp.R
 
-//done
-//TODO link link_cover string
-//TODO change admob
+// done
+// link link_cover string
+// change admob
 
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
@@ -19,13 +18,13 @@ class LApplication : BaseApplication() {
     override fun onCreate() {
         super.onCreate()
 
-        //config admob id
+        // config admob id
         AdmobData.instance.idAdmobFull = getString(R.string.str_f)
 
-        //config activity transition default
+        // config activity transition default
         ActivityData.instance.type = Constants.TYPE_ACTIVITY_TRANSITION_SLIDELEFT
 
-        //config font
+        // config font
         LUIUtil.fontForAll = Constants.FONT_PATH
     }
 }

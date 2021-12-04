@@ -44,7 +44,6 @@ class SettingFragment : BaseFragment() {
     }
 
     private fun setupViewModels() {
-
     }
 
     private fun handleSwitchDarkTheme(isChecked: Boolean) {
@@ -85,5 +84,4 @@ class SettingFragment : BaseFragment() {
             }
         }
     }
-
 }

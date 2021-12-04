@@ -2,7 +2,7 @@ package com.loitp.fragment
 
 import android.os.Bundle
 import android.view.View
-import androidx.lifecycle.Observer
+import androidx.core.view.isVisible
 import com.annotation.LogTag
 import com.core.base.BaseApplication
 import com.core.base.BaseFragment
@@ -23,7 +23,7 @@ class HomeFragment : BaseFragment() {
         setupViews()
         setupViewModels()
         context?.let {
-            mainViewModel?.loadListChap(context = it)
+            mainViewModel?.loadListChap()
         }
     }
 
@@ -33,26 +33,30 @@ class HomeFragment : BaseFragment() {
 
     private fun setupViews() {
         btGithub.setSafeOnClickListener {
-            LSocialUtil.openUrlInBrowser(context = activity, url = "https://github.com/tplloi/basemaster.demo")
+            LSocialUtil.openUrlInBrowser(
+                context = activity,
+                url = "https://github.com/tplloi/basemaster.demo"
+            )
         }
     }
 
     private fun setupViewModels() {
         mainViewModel = getViewModel(MainViewModel::class.java)
         mainViewModel?.let { mvm ->
-            mvm.eventLoading.observe(viewLifecycleOwner, Observer { isLoading ->
-                if (isLoading) {
-                    indicatorView.smoothToShow()
-                } else {
-                    indicatorView.smoothToHide()
+            mvm.eventLoading.observe(
+                viewLifecycleOwner,
+                { isLoading ->
+                    indicatorView.isVisible = isLoading
                 }
-            })
+            )
 
-            mvm.listChapLiveData.observe(viewLifecycleOwner, Observer { listChap ->
-                logD("<<<listChapLiveData " + BaseApplication.gson.toJson(listChap))
-                btGithub.visibility = View.VISIBLE
-            })
+            mvm.listChapLiveData.observe(
+                viewLifecycleOwner,
+                { listChap ->
+                    logD("<<<listChapLiveData " + BaseApplication.gson.toJson(listChap))
+                    btGithub.visibility = View.VISIBLE
+                }
+            )
         }
-
     }
 }
