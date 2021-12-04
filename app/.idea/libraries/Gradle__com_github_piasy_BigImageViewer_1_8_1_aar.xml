@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.piasy:BigImageViewer:1.8.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/afff40d0f806280e93577e274d23b9f2/jetified-BigImageViewer-1.8.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/afff40d0f806280e93577e274d23b9f2/jetified-BigImageViewer-1.8.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/afff40d0f806280e93577e274d23b9f2/jetified-BigImageViewer-1.8.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.piasy/BigImageViewer/1.8.1/e937c8a656cca3d07cdf6b70c2ee1cb2d5ded42c/BigImageViewer-1.8.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

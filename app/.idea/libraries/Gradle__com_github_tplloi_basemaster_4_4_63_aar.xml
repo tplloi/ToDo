@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.tplloi:basemaster:4.4.63@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/44345dab94eab48877acc4735f8c4591/jetified-basemaster-4.4.63/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/44345dab94eab48877acc4735f8c4591/jetified-basemaster-4.4.63/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/44345dab94eab48877acc4735f8c4591/jetified-basemaster-4.4.63/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/44345dab94eab48877acc4735f8c4591/jetified-basemaster-4.4.63/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.tplloi/basemaster/4.4.63/133ab7bfd64bcac368acaac356d6fb0f943a266/basemaster-4.4.63-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

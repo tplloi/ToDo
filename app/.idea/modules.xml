@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Base.iml" filepath="$PROJECT_DIR$/../Base.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/883862830/com.loitp.todo.iml" filepath="$PROJECT_DIR$/.idea/modules/883862830/com.loitp.todo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.loitp.todo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/com.loitp.todo.app.iml" />
     </modules>
   </component>
 </project>

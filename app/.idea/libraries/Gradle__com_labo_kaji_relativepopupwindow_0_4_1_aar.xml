@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.labo.kaji:relativepopupwindow:0.4.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a857725c215fe2f29cc156d915f58d1/jetified-relativepopupwindow-0.4.1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a857725c215fe2f29cc156d915f58d1/jetified-relativepopupwindow-0.4.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a857725c215fe2f29cc156d915f58d1/jetified-relativepopupwindow-0.4.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a857725c215fe2f29cc156d915f58d1/jetified-relativepopupwindow-0.4.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.labo.kaji/relativepopupwindow/0.4.1/23c7c07f9e91561cc0b8c3b4cb034c1150df9997/relativepopupwindow-0.4.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.labo.kaji/relativepopupwindow/0.4.1/36d9850ea34debfa041c2608f9e08695edbeb91c/relativepopupwindow-0.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

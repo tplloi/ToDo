@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.manojbhadane:QButton:v1.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0321d92fafc7f15bb98b7f440a47c307/jetified-QButton-v1.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0321d92fafc7f15bb98b7f440a47c307/jetified-QButton-v1.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0321d92fafc7f15bb98b7f440a47c307/jetified-QButton-v1.3/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.manojbhadane/QButton/v1.3/1d4f84920b741e571546c1cc894900143eb30e75/QButton-v1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.simmorsal.recolor:recolor:1.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c2cd81575182a5cbfeedcbb668b0b923/jetified-recolor-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c2cd81575182a5cbfeedcbb668b0b923/jetified-recolor-1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c2cd81575182a5cbfeedcbb668b0b923/jetified-recolor-1.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.simmorsal.recolor/recolor/1.1.0/bd7a5dc83e63ab8d74cc03d1b35bffeff71a7ce6/recolor-1.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.simmorsal.recolor/recolor/1.1.0/16b36573eb0689ffc1c74c75d42b368579c40102/recolor-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

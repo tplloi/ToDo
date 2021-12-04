@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.skydoves:elasticviews:2.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/514ce5df05d7655efabea61bb95744ec/jetified-elasticviews-2.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/514ce5df05d7655efabea61bb95744ec/jetified-elasticviews-2.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/514ce5df05d7655efabea61bb95744ec/jetified-elasticviews-2.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.skydoves/elasticviews/2.1.0/442d0c6b914f74807e93421f6a0b80b8b8622158/elasticviews-2.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.skydoves/elasticviews/2.1.0/e54bb78426b3af2b126c3422d42e056743107cb1/elasticviews-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

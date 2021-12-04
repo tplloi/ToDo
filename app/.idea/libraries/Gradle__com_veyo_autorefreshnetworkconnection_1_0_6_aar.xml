@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.veyo:autorefreshnetworkconnection:1.0.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78e316592233c4a38e5ee7dab4f1c0d4/jetified-autorefreshnetworkconnection-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78e316592233c4a38e5ee7dab4f1c0d4/jetified-autorefreshnetworkconnection-1.0.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/78e316592233c4a38e5ee7dab4f1c0d4/jetified-autorefreshnetworkconnection-1.0.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.veyo/autorefreshnetworkconnection/1.0.6/fed8dba3e63ae6e09dbccc040e2c0fe070a46114/autorefreshnetworkconnection-1.0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.veyo/autorefreshnetworkconnection/1.0.6/35b670cbd6ea24bb21755615ee6acce0777409ba/autorefreshnetworkconnection-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.piasy:GlideImageViewFactory:1.8.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2277251f6783bbb1e9cc6e0cfb08c9d8/jetified-GlideImageViewFactory-1.8.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2277251f6783bbb1e9cc6e0cfb08c9d8/jetified-GlideImageViewFactory-1.8.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2277251f6783bbb1e9cc6e0cfb08c9d8/jetified-GlideImageViewFactory-1.8.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.piasy/GlideImageViewFactory/1.8.1/2026409cd0649ac4ae2f90854355678cc75a6ec9/GlideImageViewFactory-1.8.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

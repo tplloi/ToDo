@@ -8,7 +8,7 @@ android {
     buildToolsVersion '30.0.3'
 
     defaultConfig {
-        applicationId "loitp93.basemaster.demo"
+        applicationId "com.loitp.todo"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
