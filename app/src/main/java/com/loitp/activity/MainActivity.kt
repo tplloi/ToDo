@@ -91,11 +91,21 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         when (item.itemId) {
             R.id.navHome -> {
                 currentItemId = R.id.navHome
-                LScreenUtil.replaceFragment(this, R.id.flContainer, HomeFragment(), false)
+                LScreenUtil.replaceFragment(
+                    activity = this,
+                    containerFrameLayoutIdRes = R.id.flContainer,
+                    fragment = HomeFragment(),
+                    isAddToBackStack = false
+                )
             }
             R.id.navSetting -> {
                 currentItemId = R.id.navSetting
-                LScreenUtil.replaceFragment(this, R.id.flContainer, SettingFragment(), false)
+                LScreenUtil.replaceFragment(
+                    activity = this,
+                    containerFrameLayoutIdRes = R.id.flContainer,
+                    fragment = SettingFragment(),
+                    isAddToBackStack = false
+                )
             }
 
             R.id.navMoreApp -> {
