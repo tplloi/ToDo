@@ -79,7 +79,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                 return
             }
             this.doubleBackToExitPressedOnce = true
-            showShortInformation(getString(R.string.press_again_to_exit))
+            showShortInformation(getString(R.string.press_again_to_exit), isTopAnchor = false)
             Handler(Looper.getMainLooper()).postDelayed({
                 doubleBackToExitPressedOnce = false
             }, 2000)
