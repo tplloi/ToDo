@@ -1,9 +1,5 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">TodoApp</string>
-
-<!--    https://drive.google.com/file/d/1femuL17MUTz7t0yqUkMWB5yCea1W6kqI/view?usp=sharing-->
-    <string name="link_gg_drive" tools:ignore="Typos"><![CDATA[https://drive.google.com/uc?export=download&id=1femuL17MUTz7t0yqUkMWB5yCea1W6kqI]]></string><!--no need to edit this-->
-    <string name="link_cover"><![CDATA[https://live.staticflickr.com/4380/35997985613_8fd2eab2d9_c.jpg]]></string>
 
     <!--https://apps.admob.com/v2/apps/3990788735/adunits/list-->
     <string name="str_b">ca-app-pub-3165963943681013/2677707063</string>
@@ -35,5 +31,6 @@
     <string name="chat_with_dev">Chat with dev</string>
     <string name="donation">Donation</string>
     <string name="check_out">Check out</string>
+    <string name="link_cover">https://live.staticflickr.com/4217/34252820833_642ff88c2a_b.jpg</string>
 
 </resources>
