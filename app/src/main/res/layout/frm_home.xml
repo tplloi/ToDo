@@ -22,4 +22,19 @@
         app:itemIconTint="@color/bnv_tab_item_foreground"
         app:itemTextColor="@color/bnv_tab_item_foreground"
         app:menu="@menu/menu_navigation" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_baseline_post_add_24"
+        app:backgroundTint="?attr/themeBackgroundColor"
+        app:borderWidth="@dimen/w_3"
+        app:elevation="@dimen/w_3"
+        app:fabSize="auto"
+        app:tint="?attr/themeTextColor" />
 </RelativeLayout>
