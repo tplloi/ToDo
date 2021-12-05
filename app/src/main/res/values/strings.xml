@@ -1,6 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Demo Base Master</string>
-    <string name="app_name_vn">Demo Base Master</string>
+    <string name="app_name">TodoApp</string>
 
 <!--    https://drive.google.com/file/d/1femuL17MUTz7t0yqUkMWB5yCea1W6kqI/view?usp=sharing-->
     <string name="link_gg_drive" tools:ignore="Typos"><![CDATA[https://drive.google.com/uc?export=download&id=1femuL17MUTz7t0yqUkMWB5yCea1W6kqI]]></string><!--no need to edit this-->
