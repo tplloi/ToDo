@@ -7,6 +7,7 @@ import com.core.base.BaseFragment
 import com.core.utilities.LScreenUtil
 import com.loitp.R
 import com.loitp.viewmodels.MainViewModel
+import com.views.setSafeOnClickListener
 import kotlinx.android.synthetic.main.frm_home.*
 
 @LogTag("HomeFragment")
@@ -43,6 +44,9 @@ class HomeFragment : BaseFragment() {
             }
             return@setOnItemSelectedListener true
         }
+        btCreate.setSafeOnClickListener {
+            createTask()
+        }
         goToNavAll()
     }
 
@@ -77,5 +81,10 @@ class HomeFragment : BaseFragment() {
             fragment = IncompleteFragment(),
             isAddToBackStack = false
         )
+    }
+
+    private fun createTask() {
+        val bottomSheetFragment = BottomSheetFragment()
+        bottomSheetFragment.show(childFragmentManager, bottomSheetFragment.tag)
     }
 }
