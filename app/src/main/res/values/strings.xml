@@ -15,5 +15,8 @@
     <string name="all">All</string>
     <string name="complete">Complete</string>
     <string name="incomplete">Incomplete</string>
+    <string name="create_task">Create task</string>
+    <string name="enter_your_title">Enter your title</string>
+    <string name="enter_your_description">Enter your description</string>
 
 </resources>
