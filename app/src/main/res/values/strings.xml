@@ -1,36 +1,19 @@
 <resources>
     <string name="app_name">TodoApp</string>
-
-    <!--https://apps.admob.com/v2/apps/3990788735/adunits/list-->
-    <string name="str_b">ca-app-pub-3165963943681013/2677707063</string>
-    <string name="str_f">ca-app-pub-3165963943681013/4726636975</string>
-    <string name="str_reward">ca-app-pub-3165963943681013/7959304975</string>
-    <string name="str_app_id">ca-app-pub-3165963943681013~3990788735</string>
-
     <string name="deny">Deny</string>
     <string name="yes">Yes</string>
     <string name="setting">Setting</string>
-    <string name="need_permisson">Need permission</string>
-    <string name="need_permisson_to_use_app">Need permission to use app</string>
-    <string name="app_is_not_ready">The app is temporarily unavailable, please try again later.</string>
-    <string name="check_ur_connection">Please check your connection</string>
     <string name="warning">Warning</string>
     <string name="press_again_to_exit">Press again to exit</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="rate_app">Rate</string>
     <string name="more_app">More</string>
-    <string name="facebook_fanpage">Facebook fanpage</string>
-    <string name="share_app">Share</string>
-    <string name="gallery">Gallery</string>
-    <string name="gallery_18">Gallery 18</string>
     <string name="home">Home</string>
     <string name="exit">Exit</string>
-    <string name="try_again">Try again</string>
     <string name="right_drawer">Right Drawer</string>
-    <string name="chat_with_dev">Chat with dev</string>
-    <string name="donation">Donation</string>
-    <string name="check_out">Check out</string>
     <string name="link_cover">https://live.staticflickr.com/4217/34252820833_642ff88c2a_b.jpg</string>
+    <string name="all">All</string>
+    <string name="complete">Complete</string>
+    <string name="incomplete">Incomplete</string>
 
 </resources>

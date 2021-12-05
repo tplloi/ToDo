@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navAll"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:title="@string/all" />
+
+    <item
+        android:id="@+id/navComplete"
+        android:icon="@drawable/ic_baseline_event_available_24"
+        android:title="@string/complete" />
+
+    <item
+        android:id="@+id/navIncomplete"
+        android:icon="@drawable/ic_baseline_event_busy_24"
+        android:title="@string/incomplete" />
+
+</menu>

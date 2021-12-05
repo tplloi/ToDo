@@ -6,6 +6,7 @@ import com.annotation.LogTag
 import com.core.base.BaseFragment
 import com.loitp.R
 import com.loitp.viewmodels.MainViewModel
+import kotlinx.android.synthetic.main.frm_home.*
 
 @LogTag("HomeFragment")
 class HomeFragment : BaseFragment() {
@@ -24,6 +25,19 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setupViews() {
+        bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.navAll -> {
+                }
+                R.id.navComplete -> {
+                }
+                R.id.navIncomplete -> {
+                }
+                else -> {
+                }
+            }
+            return@setOnItemSelectedListener true
+        }
     }
 
     private fun setupViewModels() {
