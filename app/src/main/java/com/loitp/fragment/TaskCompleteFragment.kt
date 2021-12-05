@@ -6,8 +6,8 @@ import com.annotation.LogTag
 import com.core.base.BaseFragment
 import com.loitp.R
 
-@LogTag("AllFragment")
-class AllFragment : BaseFragment() {
+@LogTag("CompleteFragment")
+class TaskCompleteFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -17,7 +17,7 @@ class AllFragment : BaseFragment() {
     }
 
     override fun setLayoutResourceId(): Int {
-        return R.layout.frm_all
+        return R.layout.frm_task_complete
     }
 
     private fun setupViews() {

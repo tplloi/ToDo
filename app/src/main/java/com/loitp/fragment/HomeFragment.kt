@@ -60,7 +60,7 @@ class HomeFragment : BaseFragment() {
         LScreenUtil.replaceFragment(
             activity = requireActivity(),
             containerFrameLayoutIdRes = R.id.fragmentContainerView,
-            fragment = AllFragment(),
+            fragment = TaskAllFragment(),
             isAddToBackStack = false
         )
     }
@@ -69,7 +69,7 @@ class HomeFragment : BaseFragment() {
         LScreenUtil.replaceFragment(
             activity = requireActivity(),
             containerFrameLayoutIdRes = R.id.fragmentContainerView,
-            fragment = CompleteFragment(),
+            fragment = TaskCompleteFragment(),
             isAddToBackStack = false
         )
     }
@@ -78,13 +78,13 @@ class HomeFragment : BaseFragment() {
         LScreenUtil.replaceFragment(
             activity = requireActivity(),
             containerFrameLayoutIdRes = R.id.fragmentContainerView,
-            fragment = IncompleteFragment(),
+            fragment = TaskIncompleteFragment(),
             isAddToBackStack = false
         )
     }
 
     private fun createTask() {
-        val bottomSheetFragment = BottomSheetFragment()
+        val bottomSheetFragment = TaskCreateFragment()
         bottomSheetFragment.show(childFragmentManager, bottomSheetFragment.tag)
     }
 }

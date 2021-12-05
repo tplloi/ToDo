@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.loitp.R
 
-class BottomSheetFragment : BottomSheetDialogFragment() {
+class TaskCreateFragment : BottomSheetDialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -15,6 +15,6 @@ class BottomSheetFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bottom_sheet_dialog, container, false)
+        return inflater.inflate(R.layout.frm_task_create, container, false)
     }
 } // Required empty public constructor
