@@ -59,7 +59,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
             imageView = navViewStart.getHeaderView(0).ivCover
         )
 
-        tvAd.text = LStoreUtil.readTxtFromRawFolder(nameOfRawFile = R.raw.ad)
+        tvAd.text = LStoreUtil.readTxtFromRawFolder(nameOfRawFile = R.raw.infor)
 
         switchHomeScreen()
     }
