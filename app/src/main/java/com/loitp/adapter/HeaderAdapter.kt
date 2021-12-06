@@ -11,7 +11,7 @@ import com.loitp.R
 import kotlinx.android.synthetic.main.view_row_item_header.view.*
 
 @LogTag("HeaderAdapter")
-class HeaderAdapter() : BaseAdapter() {
+class HeaderAdapter : BaseAdapter() {
     private var header: String = ""
 
     @SuppressLint("NotifyDataSetChanged")
@@ -36,6 +36,7 @@ class HeaderAdapter() : BaseAdapter() {
         )
 
     override fun getItemCount(): Int = 1
+
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder is HeaderViewHolder) {
             holder.bind()

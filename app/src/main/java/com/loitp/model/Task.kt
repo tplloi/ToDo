@@ -30,5 +30,5 @@ class Task : BaseModel() {
     @ColumnInfo(name = "description")
     @SerializedName("description")
     @Expose
-    var description: String? = ""
+    var description: String = ""
 }

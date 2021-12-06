@@ -13,6 +13,9 @@ interface TaskDao : BaseDao<Task> {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertTask(task: Task)
 
+    @Query("SELECT * FROM Task")
+    fun getListTaskAll(): List<Task>
+
     @Query("SELECT * FROM Task WHERE isComplete=1")
-    fun getListTaskIncomplete(): List<Task>
+    fun getListTaskComplete(): List<Task>
 }

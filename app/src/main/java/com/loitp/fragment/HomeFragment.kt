@@ -6,14 +6,13 @@ import com.annotation.LogTag
 import com.core.base.BaseFragment
 import com.core.utilities.LScreenUtil
 import com.loitp.R
-import com.loitp.viewmodels.MainViewModel
 import com.views.setSafeOnClickListener
 import kotlinx.android.synthetic.main.frm_home.*
 
 @LogTag("HomeFragment")
 class HomeFragment : BaseFragment() {
 
-    private var mainViewModel: MainViewModel? = null
+//    private var mainViewModel: MainViewModel? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -51,9 +50,9 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setupViewModels() {
-        mainViewModel = getViewModel(MainViewModel::class.java)
-        mainViewModel?.let { mvm ->
-        }
+//        mainViewModel = getViewModel(MainViewModel::class.java)
+//        mainViewModel?.let { mvm ->
+//        }
     }
 
     private fun goToNavAll() {

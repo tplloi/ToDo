@@ -7,16 +7,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.annotation.LogTag
 import com.core.adapter.BaseAdapter
+import com.core.base.BaseApplication
 import com.loitp.R
 import com.loitp.model.Task
 import kotlinx.android.synthetic.main.view_row_item_task.view.*
 
 @LogTag("TaskAdapter")
-class TaskAdapter() : BaseAdapter() {
+class TaskAdapter : BaseAdapter() {
     private val listTask = ArrayList<Task>()
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(listTask: ArrayList<Task>) {
+    fun setData(listTask: List<Task>) {
         this.listTask.clear()
         this.listTask.addAll(listTask)
         notifyDataSetChanged()
@@ -25,6 +26,7 @@ class TaskAdapter() : BaseAdapter() {
     inner class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(task: Task) {
+            logD(">>> $bindingAdapterPosition " + BaseApplication.gson.toJson(task))
             itemView.tvDate.text = task.id
             itemView.cbComplete.isChecked = task.isComplete
             itemView.tvTitle.text = task.title
@@ -35,12 +37,13 @@ class TaskAdapter() : BaseAdapter() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         TaskViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.view_row_item_header, parent,
+                R.layout.view_row_item_task, parent,
                 false
             )
         )
 
     override fun getItemCount(): Int = listTask.size
+
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder is TaskViewHolder) {
             holder.bind(listTask[position])

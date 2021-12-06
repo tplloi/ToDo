@@ -9,10 +9,12 @@ import com.core.base.BaseFragment
 import com.loitp.R
 import com.loitp.adapter.HeaderAdapter
 import com.loitp.adapter.TaskAdapter
+import com.loitp.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.frm_task_all.*
 
 @LogTag("AllFragment")
 class TaskAllFragment : BaseFragment() {
+    private var mainViewModel: MainViewModel? = null
     private var concatAdapter = ConcatAdapter()
     private var headerAdapter = HeaderAdapter()
     private var taskAdapter = TaskAdapter()
@@ -21,6 +23,7 @@ class TaskAllFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         setupViews()
         setupViewModels()
+        mainViewModel?.getListTaskAll()
     }
 
     override fun setLayoutResourceId(): Int {
@@ -36,5 +39,23 @@ class TaskAllFragment : BaseFragment() {
     }
 
     private fun setupViewModels() {
+        mainViewModel = getViewModel(MainViewModel::class.java)
+        mainViewModel?.let { vm ->
+            vm.getListTaskAllActionLiveData.observe(this, { actionData ->
+                val isDoing = actionData.isDoing
+                val isSuccess = actionData.isSuccess
+
+                if (isDoing == true) {
+                    showDialogProgress()
+                } else {
+                    hideDialogProgress()
+                    if (isSuccess == true) {
+                        actionData.data?.let { list ->
+                            taskAdapter.setData(list)
+                        }
+                    }
+                }
+            })
+        }
     }
 }
