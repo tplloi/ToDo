@@ -60,5 +60,19 @@
             android:textColor="?attr/themeTextColor"
             android:textSize="@dimen/txt_medium"
             tools:text="@string/app_name" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_baseline_delete_forever_24"
+            app:backgroundTint="?attr/themeBackgroundColor"
+            app:borderWidth="@dimen/w_3"
+            app:elevation="@dimen/w_3"
+            app:fabSize="mini"
+            app:tint="?attr/themeTextColor" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </com.google.android.material.card.MaterialCardView>

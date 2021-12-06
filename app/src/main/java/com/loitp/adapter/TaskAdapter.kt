@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.view_row_item_task.view.*
 @LogTag("TaskAdapter")
 class TaskAdapter : BaseAdapter() {
     private val listTask = ArrayList<Task>()
+    var onClickDeleteListener: ((Task) -> Unit)? = null
     var onClickCbCompleteListener: ((Task) -> Unit)? = null
 
     @SuppressLint("NotifyDataSetChanged")
@@ -37,6 +38,9 @@ class TaskAdapter : BaseAdapter() {
 
             itemView.cbComplete.setSafeOnClickListener {
                 onClickCbCompleteListener?.invoke(task)
+            }
+            itemView.btDelete.setSafeOnClickListener {
+                onClickDeleteListener?.invoke(task)
             }
         }
     }

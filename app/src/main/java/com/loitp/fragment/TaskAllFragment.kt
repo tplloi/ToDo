@@ -46,6 +46,9 @@ class TaskAllFragment : BaseFragment() {
         taskAdapter.onClickCbCompleteListener = { task ->
             handleCheckboxComplete(task)
         }
+        taskAdapter.onClickDeleteListener = { task ->
+            handleDeleteTask(task)
+        }
         concatAdapter.addAdapter(taskAdapter)
         recyclerView.adapter = concatAdapter
     }
@@ -83,6 +86,14 @@ class TaskAllFragment : BaseFragment() {
                     progressBar.hideProgressBar()
                 }
             })
+            vm.deleteTaskActionLiveData.observe(this, { actionData ->
+                val isDoing = actionData.isDoing
+                if (isDoing == true) {
+                    progressBar.showProgressBar()
+                } else {
+                    progressBar.hideProgressBar()
+                }
+            })
         }
     }
 
@@ -90,7 +101,7 @@ class TaskAllFragment : BaseFragment() {
     fun onMessageEvent(event: MessageEvent?) {
         event?.msg?.let {
             logD(">>> onMessageEvent $it")
-            if (it == MessageEvent.CREATE_TASK) {
+            if (it == MessageEvent.CREATE_TASK || it == MessageEvent.DELETE_TASK) {
                 getListTaskAll()
             }
         }
@@ -99,5 +110,9 @@ class TaskAllFragment : BaseFragment() {
     private fun handleCheckboxComplete(task: Task) {
         task.isComplete = !task.isComplete
         mainViewModel?.updateTask(task)
+    }
+
+    private fun handleDeleteTask(task: Task) {
+        mainViewModel?.deleteTask(task)
     }
 }
