@@ -11,6 +11,7 @@ import com.loitp.R
 import com.loitp.adapter.HeaderAdapter
 import com.loitp.adapter.TaskAdapter
 import com.loitp.model.MessageEvent
+import com.loitp.model.Task
 import com.loitp.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.frm_task_all.*
 import org.greenrobot.eventbus.Subscribe
@@ -40,10 +41,13 @@ class TaskAllFragment : BaseFragment() {
 
     private fun setupViews() {
         recyclerView.layoutManager = LinearLayoutManager(context)
+        headerAdapter.setData(getString(R.string.all))
         concatAdapter.addAdapter(headerAdapter)
+        taskAdapter.onClickCbCompleteListener = { task ->
+            handleCheckboxComplete(task)
+        }
         concatAdapter.addAdapter(taskAdapter)
         recyclerView.adapter = concatAdapter
-        headerAdapter.setData(getString(R.string.all))
     }
 
     private fun setupViewModels() {
@@ -77,7 +81,13 @@ class TaskAllFragment : BaseFragment() {
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onMessageEvent(event: MessageEvent?) {
         event?.msg?.let {
+            logD(">>> onMessageEvent $it")
             getListTaskAll()
         }
+    }
+
+    private fun handleCheckboxComplete(task: Task) {
+        task.isComplete = !task.isComplete
+        mainViewModel?.updateTask(task)
     }
 }

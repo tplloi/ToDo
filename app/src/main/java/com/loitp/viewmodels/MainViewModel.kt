@@ -47,4 +47,19 @@ class MainViewModel : BaseViewModel() {
             )
         }
     }
+
+    fun updateTask(task: Task) {
+        ioScope.launch {
+            TaskDatabase.instance?.taskDao()?.update(task)
+            delay(500) // delay for demo purpose
+            MessageEvent.postMsg(MessageEvent.UPDATE_TASK)
+            createTaskActionLiveData.post(
+                ActionData(
+                    isDoing = false,
+                    isSuccess = true,
+                    data = task
+                )
+            )
+        }
+    }
 }
