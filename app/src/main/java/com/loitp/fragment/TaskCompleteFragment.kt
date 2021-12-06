@@ -28,14 +28,14 @@ class TaskCompleteFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         setupViews()
         setupViewModels()
-        getListTaskAll()
+        getListTaskComplete()
     }
 
     override fun setLayoutResourceId(): Int {
         return R.layout.frm_task_complete
     }
 
-    private fun getListTaskAll() {
+    private fun getListTaskComplete() {
         mainViewModel?.getListTaskComplete()
     }
 
@@ -67,13 +67,7 @@ class TaskCompleteFragment : BaseFragment() {
                     if (isSuccess == true) {
                         actionData.data?.let { list ->
                             taskAdapter.setData(list)
-                            if (list.isNullOrEmpty()) {
-                                recyclerView.isVisible = false
-                                tvNoData.isVisible = true
-                            } else {
-                                recyclerView.isVisible = true
-                                tvNoData.isVisible = false
-                            }
+                            tvNoData.isVisible = list.isNullOrEmpty()
                         }
                     }
                 }
@@ -101,7 +95,7 @@ class TaskCompleteFragment : BaseFragment() {
     fun onMessageEvent(event: MessageEvent?) {
         event?.msg?.let {
             logD(">>> onMessageEvent $it")
-            getListTaskAll()
+            getListTaskComplete()
         }
     }
 

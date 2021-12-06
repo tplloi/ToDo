@@ -67,13 +67,7 @@ class TaskAllFragment : BaseFragment() {
                     if (isSuccess == true) {
                         actionData.data?.let { list ->
                             taskAdapter.setData(list)
-                            if (list.isNullOrEmpty()) {
-                                recyclerView.isVisible = false
-                                tvNoData.isVisible = true
-                            } else {
-                                recyclerView.isVisible = true
-                                tvNoData.isVisible = false
-                            }
+                            tvNoData.isVisible = list.isNullOrEmpty()
                         }
                     }
                 }

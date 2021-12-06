@@ -18,4 +18,7 @@ interface TaskDao : BaseDao<Task> {
 
     @Query("SELECT * FROM Task WHERE isComplete=1 ORDER BY id DESC")
     fun getListTaskComplete(): List<Task>
+
+    @Query("SELECT * FROM Task WHERE isComplete=0 ORDER BY id DESC")
+    fun getListTaskIncomplete(): List<Task>
 }
