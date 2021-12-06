@@ -2,6 +2,7 @@ package com.loitp.fragment
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.annotation.LogTag
@@ -52,6 +53,13 @@ class TaskAllFragment : BaseFragment() {
                     if (isSuccess == true) {
                         actionData.data?.let { list ->
                             taskAdapter.setData(list)
+                            if (list.isNullOrEmpty()) {
+                                recyclerView.isVisible = false
+                                tvNoData.isVisible = true
+                            } else {
+                                recyclerView.isVisible = true
+                                tvNoData.isVisible = false
+                            }
                         }
                     }
                 }

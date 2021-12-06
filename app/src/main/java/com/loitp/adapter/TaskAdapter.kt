@@ -27,7 +27,7 @@ class TaskAdapter : BaseAdapter() {
     inner class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(task: Task) {
-            logD(">>> $bindingAdapterPosition " + BaseApplication.gson.toJson(task))
+//            logD(">>> $bindingAdapterPosition " + BaseApplication.gson.toJson(task))
             itemView.tvDate.text = LDateUtil.getDateCurrentTimeZoneMls(task.id.toLong(), "dd-MM-yyyy HH:mm:ss")
             itemView.cbComplete.isChecked = task.isComplete
             itemView.tvTitle.text = task.title
