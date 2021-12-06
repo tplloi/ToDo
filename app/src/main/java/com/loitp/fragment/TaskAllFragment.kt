@@ -75,6 +75,14 @@ class TaskAllFragment : BaseFragment() {
                     }
                 }
             })
+            vm.updateTaskActionLiveData.observe(this, { actionData ->
+                val isDoing = actionData.isDoing
+                if (isDoing == true) {
+                    progressBar.showProgressBar()
+                } else {
+                    progressBar.hideProgressBar()
+                }
+            })
         }
     }
 
@@ -82,7 +90,9 @@ class TaskAllFragment : BaseFragment() {
     fun onMessageEvent(event: MessageEvent?) {
         event?.msg?.let {
             logD(">>> onMessageEvent $it")
-            getListTaskAll()
+            if (it == MessageEvent.CREATE_TASK) {
+                getListTaskAll()
+            }
         }
     }
 

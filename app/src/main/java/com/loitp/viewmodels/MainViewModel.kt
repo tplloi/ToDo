@@ -13,6 +13,7 @@ class MainViewModel : BaseViewModel() {
 
     val createTaskActionLiveData: ActionLiveData<ActionData<Task>> = ActionLiveData()
     val getListTaskAllActionLiveData: ActionLiveData<ActionData<List<Task>>> = ActionLiveData()
+    val updateTaskActionLiveData: ActionLiveData<ActionData<Task>> = ActionLiveData()
 
     fun createTask(task: Task) {
         createTaskActionLiveData.set(
@@ -37,7 +38,7 @@ class MainViewModel : BaseViewModel() {
             ActionData(isDoing = true)
         )
         ioScope.launch {
-            delay(500) // delay for demo purpose
+//            delay(500) // delay for demo purpose
             val list = TaskDatabase.instance?.taskDao()?.getListTaskAll()
             getListTaskAllActionLiveData.post(
                 ActionData(
@@ -50,11 +51,14 @@ class MainViewModel : BaseViewModel() {
     }
 
     fun updateTask(task: Task) {
+        updateTaskActionLiveData.set(
+            ActionData(isDoing = true)
+        )
         ioScope.launch {
             delay(500) // delay for demo purpose
             TaskDatabase.instance?.taskDao()?.update(task)
             MessageEvent.postMsg(MessageEvent.UPDATE_TASK)
-            createTaskActionLiveData.post(
+            updateTaskActionLiveData.post(
                 ActionData(
                     isDoing = false,
                     isSuccess = true,
