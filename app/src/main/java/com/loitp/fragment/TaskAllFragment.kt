@@ -8,12 +8,14 @@ import com.annotation.LogTag
 import com.core.base.BaseFragment
 import com.loitp.R
 import com.loitp.adapter.HeaderAdapter
+import com.loitp.adapter.TaskAdapter
 import kotlinx.android.synthetic.main.frm_task_all.*
 
 @LogTag("AllFragment")
 class TaskAllFragment : BaseFragment() {
     private var concatAdapter = ConcatAdapter()
-    private var headerAdapter: HeaderAdapter? = null
+    private var headerAdapter = HeaderAdapter()
+    private var taskAdapter = TaskAdapter()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -27,11 +29,10 @@ class TaskAllFragment : BaseFragment() {
 
     private fun setupViews() {
         recyclerView.layoutManager = LinearLayoutManager(context)
-        headerAdapter = HeaderAdapter(getString(R.string.all))
-        headerAdapter?.let { ha ->
-            concatAdapter.addAdapter(ha)
-        }
+        concatAdapter.addAdapter(headerAdapter)
+        concatAdapter.addAdapter(taskAdapter)
         recyclerView.adapter = concatAdapter
+        headerAdapter.setData(getString(R.string.all))
     }
 
     private fun setupViewModels() {

@@ -1,5 +1,6 @@
 package com.loitp.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,9 +11,16 @@ import com.loitp.R
 import kotlinx.android.synthetic.main.view_row_item_header.view.*
 
 @LogTag("HeaderAdapter")
-class HeaderAdapter(private val header: String) : BaseAdapter() {
+class HeaderAdapter() : BaseAdapter() {
+    private var header: String = ""
 
-    inner class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    @SuppressLint("NotifyDataSetChanged")
+    fun setData(header: String) {
+        this.header = header
+        notifyDataSetChanged()
+    }
+
+    inner class HeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind() {
             itemView.tvHeader.text = header
@@ -20,7 +28,7 @@ class HeaderAdapter(private val header: String) : BaseAdapter() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        DataViewHolder(
+        HeaderViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.view_row_item_header, parent,
                 false
@@ -29,7 +37,7 @@ class HeaderAdapter(private val header: String) : BaseAdapter() {
 
     override fun getItemCount(): Int = 1
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        if (holder is DataViewHolder) {
+        if (holder is HeaderViewHolder) {
             holder.bind()
         }
     }
