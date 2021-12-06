@@ -58,9 +58,9 @@ class TaskAllFragment : BaseFragment() {
                 val isSuccess = actionData.isSuccess
 
                 if (isDoing == true) {
-                    showDialogProgress()
+                    progressBar.showProgressBar()
                 } else {
-                    hideDialogProgress()
+                    progressBar.hideProgressBar()
                     if (isSuccess == true) {
                         actionData.data?.let { list ->
                             taskAdapter.setData(list)
