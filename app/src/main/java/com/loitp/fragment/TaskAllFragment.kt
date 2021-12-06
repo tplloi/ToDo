@@ -10,8 +10,11 @@ import com.core.base.BaseFragment
 import com.loitp.R
 import com.loitp.adapter.HeaderAdapter
 import com.loitp.adapter.TaskAdapter
+import com.loitp.model.MessageEvent
 import com.loitp.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.frm_task_all.*
+import org.greenrobot.eventbus.Subscribe
+import org.greenrobot.eventbus.ThreadMode
 
 @LogTag("AllFragment")
 class TaskAllFragment : BaseFragment() {
@@ -24,11 +27,15 @@ class TaskAllFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         setupViews()
         setupViewModels()
-        mainViewModel?.getListTaskAll()
+        getListTaskAll()
     }
 
     override fun setLayoutResourceId(): Int {
         return R.layout.frm_task_all
+    }
+
+    private fun getListTaskAll() {
+        mainViewModel?.getListTaskAll()
     }
 
     private fun setupViews() {
@@ -64,6 +71,13 @@ class TaskAllFragment : BaseFragment() {
                     }
                 }
             })
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onMessageEvent(event: MessageEvent?) {
+        event?.msg?.let {
+            getListTaskAll()
         }
     }
 }

@@ -2,6 +2,7 @@ package com.loitp.viewmodels
 
 import com.core.base.BaseViewModel
 import com.loitp.db.TaskDatabase
+import com.loitp.model.MessageEvent
 import com.loitp.model.Task
 import com.service.livedata.ActionData
 import com.service.livedata.ActionLiveData
@@ -20,6 +21,7 @@ class MainViewModel : BaseViewModel() {
         ioScope.launch {
             delay(500) // delay for demo purpose
             TaskDatabase.instance?.taskDao()?.insertTask(task = task)
+            MessageEvent.postMsg(MessageEvent.CREATE_TASK)
             createTaskActionLiveData.post(
                 ActionData(
                     isDoing = false,
