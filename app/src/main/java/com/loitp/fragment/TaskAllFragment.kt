@@ -113,6 +113,14 @@ class TaskAllFragment : BaseFragment() {
     }
 
     private fun handleDeleteTask(task: Task) {
-        mainViewModel?.deleteTask(task)
+        showBottomSheetOptionFragment(
+            title = getString(R.string.warning),
+            message = getString(R.string.delete_msg),
+            textButton1 = getString(R.string.cancel),
+            textButton2 = getString(R.string.confirm),
+            onClickButton2 = {
+                mainViewModel?.deleteTask(task)
+            }
+        )
     }
 }
