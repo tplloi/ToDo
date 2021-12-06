@@ -1,21 +1,29 @@
 package com.loitp.viewmodels
 
-import androidx.lifecycle.MutableLiveData
 import com.core.base.BaseViewModel
+import com.loitp.db.TaskDatabase
+import com.loitp.model.Task
+import com.service.livedata.ActionData
+import com.service.livedata.ActionLiveData
+import kotlinx.coroutines.launch
 
 class MainViewModel : BaseViewModel() {
 
-    val listChapLiveData: MutableLiveData<List<String>> = MutableLiveData()
+    val createTaskActionLiveData: ActionLiveData<ActionData<Task>> = ActionLiveData()
 
-//    fun loadListChap() {
-//        ioScope.launch {
-//            showLoading(true)
-//
-//            val string = LStoreUtil.readTxtFromAsset(assetFile = "db.sqlite")
-//            val listChap = string.split("#")
-//            listChapLiveData.postValue(listChap)
-//
-//            showLoading(false)
-//        }
-//    }
+    fun createTask(task: Task) {
+        createTaskActionLiveData.set(
+            ActionData(isDoing = true)
+        )
+        ioScope.launch {
+            TaskDatabase.instance?.taskDao()?.insertTask(task = task)
+            createTaskActionLiveData.post(
+                ActionData(
+                    isDoing = false,
+                    isSuccess = true,
+                    data = task
+                )
+            )
+        }
+    }
 }

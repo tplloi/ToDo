@@ -22,11 +22,6 @@ class Task : BaseModel() {
     @Expose
     var id: String = ""
 
-    @ColumnInfo(name = "date")
-    @SerializedName("date")
-    @Expose
-    var date: String = ""
-
     @ColumnInfo(name = "isComplete")
     @SerializedName("isComplete")
     @Expose

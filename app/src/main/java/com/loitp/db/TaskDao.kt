@@ -11,7 +11,7 @@ import com.loitp.model.Task
 interface TaskDao : BaseDao<Task> {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertTask(list: Task)
+    fun insertTask(task: Task)
 
     @Query("SELECT * FROM Task WHERE isComplete=1")
     fun getListTaskIncomplete(): List<Task>

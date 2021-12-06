@@ -57,7 +57,7 @@
         android:layout_marginTop="@dimen/margin_medium">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etContent"
+            android:id="@+id/etDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/themeBackgroundColorMedium"

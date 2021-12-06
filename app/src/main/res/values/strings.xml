@@ -18,5 +18,7 @@
     <string name="create_task">Create task</string>
     <string name="enter_your_title">Enter your title</string>
     <string name="enter_your_description">Enter your description</string>
+    <string name="title_cannot_be_null_or_empty">Title cannot be null or empty</string>
+    <string name="create_successfully">Create successfully</string>
 
 </resources>
