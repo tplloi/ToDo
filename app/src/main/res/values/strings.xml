@@ -21,5 +21,6 @@
     <string name="title_cannot_be_null_or_empty">Title cannot be null or empty</string>
     <string name="create_successfully">Create successfully</string>
     <string name="delete_msg">Do you want to delete this task?</string>
+    <string name="this_app_will_be_restarted">This app will be restarted</string>
 
 </resources>
