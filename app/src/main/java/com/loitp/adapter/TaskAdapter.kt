@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.annotation.LogTag
 import com.core.adapter.BaseAdapter
 import com.core.base.BaseApplication
+import com.core.utilities.LDateUtil
 import com.loitp.R
 import com.loitp.model.Task
 import kotlinx.android.synthetic.main.view_row_item_task.view.*
@@ -27,7 +28,7 @@ class TaskAdapter : BaseAdapter() {
 
         fun bind(task: Task) {
             logD(">>> $bindingAdapterPosition " + BaseApplication.gson.toJson(task))
-            itemView.tvDate.text = task.id
+            itemView.tvDate.text = LDateUtil.getDateCurrentTimeZoneMls(task.id.toLong(), "dd-MM-yyyy HH:mm:ss")
             itemView.cbComplete.isChecked = task.isComplete
             itemView.tvTitle.text = task.title
             itemView.tvDescription.text = task.description
