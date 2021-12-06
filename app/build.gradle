@@ -71,10 +71,14 @@ repositories {
 }
 
 dependencies {
+    // my base library
     api 'com.github.tplloi:basemaster:4.4.63'
 
     //https://github.com/shiburagi/Drawer-Behavior
     api 'com.infideap.drawerbehavior:drawer-behavior:1.0.1'
+
+    //room
+    kapt "androidx.room:room-compiler:2.3.0"
 }
 //apply plugin: 'com.google.gms.google-services'
 //com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

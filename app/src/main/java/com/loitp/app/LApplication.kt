@@ -5,6 +5,7 @@ import com.core.base.BaseApplication
 import com.core.common.Constants
 import com.core.utilities.LUIUtil
 import com.data.ActivityData
+import com.loitp.db.TaskDatabase
 
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
@@ -15,5 +16,6 @@ class LApplication : BaseApplication() {
         ActivityData.instance.type = Constants.TYPE_ACTIVITY_TRANSITION_SLIDELEFT
         // config font
         LUIUtil.fontForAll = Constants.FONT_PATH
+        TaskDatabase.getInstance(this)
     }
 }
