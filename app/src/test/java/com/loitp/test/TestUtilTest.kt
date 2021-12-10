@@ -36,4 +36,11 @@ class TestUtilTest {
             assertThat(result).isFalse()
         }
     }
+
+    @Test
+    fun `get list task incomplete return false when list null or empty `() {
+        TestUtil.getListTaskIncomplete { result ->
+            assertThat(result).isFalse()
+        }
+    }
 }

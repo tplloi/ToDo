@@ -51,4 +51,17 @@ object TestUtil {
             }
         }
     }
+
+    fun getListTaskIncomplete(result: ((Boolean) -> Unit)) {
+//        result.invoke(true)
+
+        ioScope.launch {
+            val list = TaskDatabase.instance?.taskDao()?.getListTaskIncomplete()
+            if (list.isNullOrEmpty()) {
+                result.invoke(false)
+            } else {
+                result.invoke(true)
+            }
+        }
+    }
 }
