@@ -43,4 +43,22 @@ class TestUtilTest {
             assertThat(result).isFalse()
         }
     }
+
+    @Test
+    fun `update task return false when task id null`() {
+        TestUtil.updateTask(null) { result ->
+            assertThat(result).isFalse()
+        }
+    }
+
+    @Test
+    fun `update task return false when task title empty`() {
+        val task = Task().apply {
+            id = System.currentTimeMillis().toString()
+            title = ""
+        }
+        TestUtil.updateTask(task) { result ->
+            assertThat(result).isFalse()
+        }
+    }
 }

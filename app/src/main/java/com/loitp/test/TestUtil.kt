@@ -64,4 +64,18 @@ object TestUtil {
             }
         }
     }
+
+    fun updateTask(task: Task?, result: ((Boolean) -> Unit)) {
+//        result.invoke(true)
+
+        val instance = TaskDatabase.instance
+        if (task == null || task.title.isEmpty() || task.id.isEmpty() || instance == null) {
+            result.invoke(false)
+        } else {
+            ioScope.launch {
+                instance.taskDao().update(task)
+                result.invoke(true)
+            }
+        }
+    }
 }
