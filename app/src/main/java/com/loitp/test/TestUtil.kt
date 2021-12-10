@@ -25,4 +25,17 @@ object TestUtil {
             }
         }
     }
+
+    fun getListTaskAll(result: ((Boolean) -> Unit)) {
+//        result.invoke(true)
+
+        ioScope.launch {
+            val list = TaskDatabase.instance?.taskDao()?.getListTaskAll()
+            if (list.isNullOrEmpty()) {
+                result.invoke(false)
+            } else {
+                result.invoke(true)
+            }
+        }
+    }
 }
