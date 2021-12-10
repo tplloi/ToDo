@@ -25,7 +25,7 @@ class MainViewModel : BaseViewModel() {
         )
         ioScope.launch {
             delay(500) // delay for demo purpose
-            TaskDatabase.instance?.taskDao()?.insertTask(task = task)
+            TaskDatabase.instance?.taskDao()?.insert(task)
             MessageEvent.postMsg(MessageEvent.CREATE_TASK)
             createTaskActionLiveData.post(
                 ActionData(

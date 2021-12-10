@@ -35,4 +35,12 @@ class AuthUtilTest {
         val repeatPassword = "1"
         assertThat(AuthUtil.signUp(userName, password, repeatPassword)).isFalse()
     }
+
+    @Test
+    fun `create task`() {
+        val userName = "Brian"
+        val password = "1"
+        val repeatPassword = "1"
+        assertThat(AuthUtil.signUp(userName, password, repeatPassword)).isFalse()
+    }
 }

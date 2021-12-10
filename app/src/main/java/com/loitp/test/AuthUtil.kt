@@ -1,5 +1,7 @@
 package com.loitp.test
 
+import com.loitp.model.Task
+
 object AuthUtil {
     private val users = listOf("Peter", "John", "Smith")
 
@@ -15,5 +17,10 @@ object AuthUtil {
             password.length < 2 -> false
             else -> true
         }
+    }
+
+    fun createTask(task: Task): Boolean {
+//        TaskDatabase.instance?.taskDao()?.insert(task)
+        return true
     }
 }
