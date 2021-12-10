@@ -61,4 +61,11 @@ class TestUtilTest {
             assertThat(result).isFalse()
         }
     }
+
+    @Test
+    fun `delete task return false when task null`() {
+        TestUtil.deleteTask(null) { result ->
+            assertThat(result).isFalse()
+        }
+    }
 }

@@ -78,4 +78,18 @@ object TestUtil {
             }
         }
     }
+
+    fun deleteTask(task: Task?, result: ((Boolean) -> Unit)) {
+//        result.invoke(true)
+
+        val instance = TaskDatabase.instance
+        if (task == null || task.id.isEmpty() || instance == null) {
+            result.invoke(false)
+        } else {
+            ioScope.launch {
+                instance.taskDao().delete(task)
+                result.invoke(true)
+            }
+        }
+    }
 }
