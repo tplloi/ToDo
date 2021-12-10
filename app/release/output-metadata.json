@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "loitp93.basemaster.demo",
-  "variantName": "processReleaseResources",
+  "applicationId": "com.loitp.todo",
+  "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 5,
-      "versionName": "1.0.5",
-      "outputFile": "BaseMaster_Demo_release_1.0.5_5.apk"
+      "versionCode": 1,
+      "versionName": "1.0.1",
+      "outputFile": "App_Demo_release_1.0.1_1.apk"
     }
   ]
 }
