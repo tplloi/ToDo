@@ -68,4 +68,14 @@ class TestUtilTest {
             assertThat(result).isFalse()
         }
     }
+
+    @Test
+    fun `delete task return false when task id is empty`() {
+        val task = Task().apply {
+            id = ""
+        }
+        TestUtil.deleteTask(task) { result ->
+            assertThat(result).isFalse()
+        }
+    }
 }
