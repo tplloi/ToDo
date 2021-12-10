@@ -24,8 +24,15 @@ class TestUtilTest {
     }
 
     @Test
-    fun `get list task return false when list null or empty `() {
+    fun `get list task all return false when list null or empty `() {
         TestUtil.getListTaskAll { result ->
+            assertThat(result).isFalse()
+        }
+    }
+
+    @Test
+    fun `get list task complete return false when list null or empty `() {
+        TestUtil.getListTaskComplete { result ->
             assertThat(result).isFalse()
         }
     }
