@@ -1,11 +1,11 @@
-package com.loitp.app
+package com.roy93group.app
 
-import com.annotation.LogTag
-import com.core.base.BaseApplication
-import com.core.common.Constants
-import com.core.utilities.LUIUtil
-import com.data.ActivityData
-import com.loitp.db.TaskDatabase
+import com.roy93group.db.TaskDatabase
+import com.loitpcore.annotation.LogTag
+import com.loitpcore.core.base.BaseApplication
+import com.loitpcore.core.common.Constants
+import com.loitpcore.core.utilities.LUIUtil
+import com.loitpcore.data.ActivityData
 
 @LogTag("LApplication")
 class LApplication : BaseApplication() {

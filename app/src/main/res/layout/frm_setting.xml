@@ -17,17 +17,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="@dimen/padding_medium"
+            android:padding="@dimen/margin_padding_medium"
             tools:ignore="HardcodedText">
 
-            <com.views.switchtoggle.appcompatswitch.LColorSwitchCompat
+            <com.loitpcore.views.switchToggle.appcompatSwitch.LColorSwitchCompat
                 android:id="@+id/swEnableDarkMode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/dark_theme"
                 android:textColor="?attr/themeTextColor"
-                android:textSize="@dimen/text_medium"
+                android:textSize="@dimen/txt_medium"
                 app:bgOffColor="@color/lightGrey"
                 app:bgOnColor="@color/lightGrey"
                 app:toggleOffColor="@color/colorPrimary"

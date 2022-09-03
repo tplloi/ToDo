@@ -1,16 +1,16 @@
-package com.loitp.adapter
+package com.roy93group.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.annotation.LogTag
-import com.core.adapter.BaseAdapter
-import com.core.utilities.LDateUtil
-import com.loitp.R
-import com.loitp.model.Task
-import com.views.setSafeOnClickListener
+import com.roy93group.model.Task
+import com.loitpcore.annotation.LogTag
+import com.loitpcore.core.adapter.BaseAdapter
+import com.loitpcore.core.utilities.LDateUtil
+import com.loitpcore.views.setSafeOnClickListener
+import com.roy93group.R
 import kotlinx.android.synthetic.main.view_row_item_task.view.*
 
 @LogTag("TaskAdapter")

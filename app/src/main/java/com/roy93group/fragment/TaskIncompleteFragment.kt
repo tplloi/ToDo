@@ -1,24 +1,24 @@
-package com.loitp.fragment
+package com.roy93group.fragment
 
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.annotation.LogTag
-import com.core.base.BaseFragment
-import com.loitp.R
-import com.loitp.adapter.HeaderAdapter
-import com.loitp.adapter.TaskAdapter
-import com.loitp.model.MessageEvent
-import com.loitp.model.Task
-import com.loitp.viewmodels.MainViewModel
+import com.roy93group.adapter.HeaderAdapter
+import com.roy93group.adapter.TaskAdapter
+import com.roy93group.model.MessageEvent
+import com.roy93group.model.Task
+import com.roy93group.viewmodels.MainViewModel
+import com.loitpcore.annotation.LogTag
+import com.loitpcore.core.base.BaseFragment
+import com.roy93group.R
 import kotlinx.android.synthetic.main.frm_task_all.*
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
-@LogTag("CompleteFragment")
-class TaskCompleteFragment : BaseFragment() {
+@LogTag("IncompleteFragment")
+class TaskIncompleteFragment : BaseFragment() {
     private var mainViewModel: MainViewModel? = null
     private var concatAdapter = ConcatAdapter()
     private var headerAdapter = HeaderAdapter()
@@ -28,20 +28,20 @@ class TaskCompleteFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         setupViews()
         setupViewModels()
-        getListTaskComplete()
+        getListTaskIncomplete()
     }
 
     override fun setLayoutResourceId(): Int {
-        return R.layout.frm_task_complete
+        return R.layout.frm_task_incomplete
     }
 
-    private fun getListTaskComplete() {
-        mainViewModel?.getListTaskComplete()
+    private fun getListTaskIncomplete() {
+        mainViewModel?.getListTaskIncomplete()
     }
 
     private fun setupViews() {
         recyclerView.layoutManager = LinearLayoutManager(context)
-        headerAdapter.setData(getString(R.string.complete))
+        headerAdapter.setData(getString(R.string.incomplete))
         concatAdapter.addAdapter(headerAdapter)
         taskAdapter.onClickCbCompleteListener = { task ->
             handleCheckboxComplete(task)
@@ -56,7 +56,7 @@ class TaskCompleteFragment : BaseFragment() {
     private fun setupViewModels() {
         mainViewModel = getViewModel(MainViewModel::class.java)
         mainViewModel?.let { vm ->
-            vm.getListTaskCompleteActionLiveData.observe(this, { actionData ->
+            vm.getListTaskIncompleteActionLiveData.observe(this, { actionData ->
                 val isDoing = actionData.isDoing
                 val isSuccess = actionData.isSuccess
 
@@ -95,7 +95,7 @@ class TaskCompleteFragment : BaseFragment() {
     fun onMessageEvent(event: MessageEvent?) {
         event?.msg?.let {
             logD(">>> onMessageEvent $it")
-            getListTaskComplete()
+            getListTaskIncomplete()
         }
     }
 

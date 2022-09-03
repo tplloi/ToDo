@@ -1,17 +1,16 @@
-package com.loitp.fragment
+package com.roy93group.fragment
 
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.annotation.LogTag
-import com.core.base.BaseFragment
-import com.core.utilities.LActivityUtil
-import com.core.utilities.LDialogUtil
-import com.core.utilities.LUIUtil
-import com.loitp.R
-import com.loitp.activity.MainActivity
-import kotlinx.android.synthetic.main.frm_home.*
+import com.roy93group.activity.MainActivity
+import com.loitpcore.annotation.LogTag
+import com.loitpcore.core.base.BaseFragment
+import com.loitpcore.core.utilities.LActivityUtil
+import com.loitpcore.core.utilities.LDialogUtil
+import com.loitpcore.core.utilities.LUIUtil
+import com.roy93group.R
 import kotlinx.android.synthetic.main.frm_setting.*
 
 @LogTag("SettingFragment")
@@ -55,10 +54,10 @@ class SettingFragment : BaseFragment() {
 
             dialog = LDialogUtil.showDialog2(
                 context = c,
-                title = getString(com.R.string.warning),
+                title = getString(R.string.warning),
                 msg = getString(R.string.this_app_will_be_restarted),
-                button1 = getString(com.R.string.cancel),
-                button2 = getString(com.R.string.ok),
+                button1 = getString(R.string.cancel),
+                button2 = getString(R.string.ok),
                 onClickButton1 = {
                     swEnableDarkMode?.isChecked = LUIUtil.isDarkTheme()
                 },

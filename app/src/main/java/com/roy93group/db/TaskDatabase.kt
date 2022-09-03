@@ -1,10 +1,10 @@
-package com.loitp.db
+package com.roy93group.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.loitp.model.Task
+import com.roy93group.model.Task
 
 @Database(
     entities = [Task::class],
