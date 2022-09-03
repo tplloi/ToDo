@@ -2,11 +2,11 @@ package com.loitp.fragment
 
 import android.os.Bundle
 import android.view.View
-import com.annotation.LogTag
-import com.core.base.BaseFragment
-import com.core.utilities.LScreenUtil
 import com.loitp.R
-import com.views.setSafeOnClickListener
+import com.loitpcore.annotation.LogTag
+import com.loitpcore.core.base.BaseFragment
+import com.loitpcore.core.utilities.LScreenUtil
+import com.loitpcore.views.setSafeOnClickListener
 import kotlinx.android.synthetic.main.frm_home.*
 
 @LogTag("HomeFragment")

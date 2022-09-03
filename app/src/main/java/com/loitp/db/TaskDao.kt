@@ -2,8 +2,8 @@ package com.loitp.db
 
 import androidx.room.Dao
 import androidx.room.Query
-import com.core.base.BaseDao
 import com.loitp.model.Task
+import com.loitpcore.core.base.BaseDao
 
 @Dao
 interface TaskDao : BaseDao<Task> {

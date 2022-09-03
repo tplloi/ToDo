@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:gravity="center"
-        android:padding="@dimen/padding_medium"
+        android:padding="@dimen/margin_padding_medium"
         android:text="@string/copyright"
         android:textColor="?attr/themeTextColor"
         android:textSize="@dimen/txt_medium" />
@@ -42,7 +42,7 @@
         android:layout_above="@+id/textViewVersion"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_padding_medium"
         android:indeterminateTint="@color/colorPrimary" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:padding="@dimen/padding_medium"
+        android:padding="@dimen/margin_padding_medium"
         android:text="@string/policy"
         android:textColor="@drawable/text_white_blue"
         android:textSize="@dimen/txt_medium" />

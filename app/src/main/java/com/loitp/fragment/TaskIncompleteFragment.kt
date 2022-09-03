@@ -5,14 +5,14 @@ import android.view.View
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.annotation.LogTag
-import com.core.base.BaseFragment
 import com.loitp.R
 import com.loitp.adapter.HeaderAdapter
 import com.loitp.adapter.TaskAdapter
 import com.loitp.model.MessageEvent
 import com.loitp.model.Task
 import com.loitp.viewmodels.MainViewModel
+import com.loitpcore.annotation.LogTag
+import com.loitpcore.core.base.BaseFragment
 import kotlinx.android.synthetic.main.frm_task_all.*
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode

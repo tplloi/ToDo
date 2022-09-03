@@ -40,6 +40,19 @@
         <entry key="..\:/Project/Android/com.loitp.todo/app/src/main/res/menu/menu_drawer_start.xml" value="0.28229166666666666" />
         <entry key="..\:/Project/Android/com.loitp.todo/app/src/main/res/menu/menu_navigation.xml" value="0.24375" />
         <entry key="..\:/Project/Android/com.loitp.todo/app/src/main/res/menu/navigation.xml" value="0.24375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.18229166666666666" />
+        <entry key="app/src/main/res/layout/frm_home.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/frm_setting.xml" value="0.1671875" />
+        <entry key="app/src/main/res/layout/frm_task_all.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/frm_task_complete.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/frm_task_create.xml" value="0.1671875" />
+        <entry key="app/src/main/res/layout/frm_task_incomplete.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/view_drawer_end.xml" value="0.1671875" />
+        <entry key="app/src/main/res/layout/view_drawer_main.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/view_drawer_start.xml" value="0.1671875" />
+        <entry key="app/src/main/res/layout/view_row_item_header.xml" value="0.1671875" />
+        <entry key="app/src/main/res/layout/view_row_item_task.xml" value="0.1671875" />
       </map>
     </option>
   </component>

@@ -4,13 +4,13 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
 import androidx.lifecycle.ViewModelProvider
-import com.core.base.BaseBottomSheetFragment
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.loitp.R
 import com.loitp.activity.MainActivity
 import com.loitp.model.Task
 import com.loitp.viewmodels.MainViewModel
-import com.views.setSafeOnClickListener
+import com.loitpcore.core.base.BaseBottomSheetFragment
+import com.loitpcore.views.setSafeOnClickListener
 import kotlinx.android.synthetic.main.frm_task_create.*
 
 class TaskCreateFragment : BaseBottomSheetFragment(

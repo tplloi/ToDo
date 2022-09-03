@@ -1,11 +1,11 @@
 package com.loitp.viewmodels
 
-import com.core.base.BaseViewModel
 import com.loitp.db.TaskDatabase
 import com.loitp.model.MessageEvent
 import com.loitp.model.Task
-import com.service.livedata.ActionData
-import com.service.livedata.ActionLiveData
+import com.loitpcore.core.base.BaseViewModel
+import com.loitpcore.service.liveData.ActionData
+import com.loitpcore.service.liveData.ActionLiveData
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

@@ -27,12 +27,12 @@
         app:drawableTint="?attr/themeTextColor"
         tools:visibility="visible" />
 
-    <com.views.progressloadingview.window.WP10ProgressBar
+    <com.loitpcore.views.progressLoadingView.window.WP10ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_padding_medium"
         android:clipChildren="false"
         app:wpIndicatorColor="?attr/themeTextColor" />
 

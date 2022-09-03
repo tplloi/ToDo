@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="?attr/themeBackgroundColorMedium"
     android:orientation="vertical"
-    android:padding="@dimen/padding_medium">
+    android:padding="@dimen/margin_padding_medium">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:id="@+id/cbComplete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_padding_medium"
             android:buttonTint="?attr/themeTextColor"
             android:text="@string/complete"
             android:textColor="?attr/themeTextColor"
@@ -36,7 +36,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium">
+        android:layout_marginTop="@dimen/margin_padding_medium">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etTitle"
@@ -54,7 +54,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium">
+        android:layout_marginTop="@dimen/margin_padding_medium">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etDescription"
@@ -76,9 +76,9 @@
         android:id="@+id/btCreate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_padding_medium"
         android:backgroundTint="@color/colorPrimary"
-        android:padding="@dimen/padding_medium"
+        android:padding="@dimen/margin_padding_medium"
         android:text="@string/create_task"
         android:textAllCaps="false"
         android:textColor="@color/white"
