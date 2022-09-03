@@ -7,7 +7,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.loitp.todo"
+        applicationId "com.roy93group.todo"
         minSdkVersion 24
         targetSdkVersion 33
         versionCode 20220309
