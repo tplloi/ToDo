@@ -1,7 +1,8 @@
 package com.loitp.test
 
 import com.google.common.truth.Truth.assertThat
-import com.loitp.model.Task
+import com.roy93group.model.Task
+import com.roy93group.test.TestUtil
 import org.junit.Test
 
 class TestUtilTest {

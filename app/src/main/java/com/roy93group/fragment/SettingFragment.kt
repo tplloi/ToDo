@@ -1,16 +1,16 @@
-package com.loitp.fragment
+package com.roy93group.fragment
 
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.loitp.R
-import com.loitp.activity.MainActivity
+import com.roy93group.activity.MainActivity
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFragment
 import com.loitpcore.core.utilities.LActivityUtil
 import com.loitpcore.core.utilities.LDialogUtil
 import com.loitpcore.core.utilities.LUIUtil
+import com.roy93group.R
 import kotlinx.android.synthetic.main.frm_setting.*
 
 @LogTag("SettingFragment")

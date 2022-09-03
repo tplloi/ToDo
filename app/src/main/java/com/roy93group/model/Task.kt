@@ -1,4 +1,4 @@
-package com.loitp.model
+package com.roy93group.model
 
 import androidx.annotation.Keep
 import androidx.room.ColumnInfo

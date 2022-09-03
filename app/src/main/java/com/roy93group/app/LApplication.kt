@@ -1,6 +1,6 @@
-package com.loitp.app
+package com.roy93group.app
 
-import com.loitp.db.TaskDatabase
+import com.roy93group.db.TaskDatabase
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseApplication
 import com.loitpcore.core.common.Constants

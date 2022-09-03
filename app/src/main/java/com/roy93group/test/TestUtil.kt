@@ -1,7 +1,7 @@
-package com.loitp.test
+package com.roy93group.test
 
-import com.loitp.db.TaskDatabase
-import com.loitp.model.Task
+import com.roy93group.db.TaskDatabase
+import com.roy93group.model.Task
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

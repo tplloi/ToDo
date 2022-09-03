@@ -1,16 +1,16 @@
-package com.loitp.fragment
+package com.roy93group.fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.loitp.R
-import com.loitp.activity.MainActivity
-import com.loitp.model.Task
-import com.loitp.viewmodels.MainViewModel
+import com.roy93group.activity.MainActivity
+import com.roy93group.model.Task
+import com.roy93group.viewmodels.MainViewModel
 import com.loitpcore.core.base.BaseBottomSheetFragment
 import com.loitpcore.views.setSafeOnClickListener
+import com.roy93group.R
 import kotlinx.android.synthetic.main.frm_task_create.*
 
 class TaskCreateFragment : BaseBottomSheetFragment(

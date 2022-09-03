@@ -1,8 +1,8 @@
-package com.loitp.viewmodels
+package com.roy93group.viewmodels
 
-import com.loitp.db.TaskDatabase
-import com.loitp.model.MessageEvent
-import com.loitp.model.Task
+import com.roy93group.db.TaskDatabase
+import com.roy93group.model.MessageEvent
+import com.roy93group.model.Task
 import com.loitpcore.core.base.BaseViewModel
 import com.loitpcore.service.liveData.ActionData
 import com.loitpcore.service.liveData.ActionLiveData
