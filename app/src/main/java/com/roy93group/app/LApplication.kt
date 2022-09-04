@@ -7,6 +7,13 @@ import com.loitpcore.core.common.Constants
 import com.loitpcore.core.utilities.LUIUtil
 import com.loitpcore.data.ActivityData
 
+//TODO ic_launcher
+//TODO new keystore
+//TODO refactor codes
+
+//DONE
+//change pkg name
+
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
 
