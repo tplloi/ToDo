@@ -9,10 +9,10 @@ import com.loitpcore.data.ActivityData
 
 //TODO ic_launcher
 //TODO new keystore
+//TODO refactor codes
 
 //DONE
 //change pkg name
-//refactor codes
 
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
