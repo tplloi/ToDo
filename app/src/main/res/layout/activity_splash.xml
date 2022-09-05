@@ -64,6 +64,6 @@
         android:gravity="center"
         android:padding="@dimen/margin_padding_medium"
         android:text="@string/policy"
-        android:textColor="@drawable/text_white_blue"
+        android:textColor="@color/blue"
         android:textSize="@dimen/txt_medium" />
 </RelativeLayout>
