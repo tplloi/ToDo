@@ -7,12 +7,12 @@ import com.loitpcore.core.utilities.LUIUtil
 import com.loitpcore.data.ActivityData
 import com.roy93group.db.TaskDatabase
 
-//TODO new keystore
 //TODO refactor codes
 
 //DONE
 //change pkg name
 //TODO ic_launcher
+//TODO new keystore 2022.09.05
 
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
