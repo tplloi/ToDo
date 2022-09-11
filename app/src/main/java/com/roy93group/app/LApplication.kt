@@ -11,8 +11,8 @@ import com.roy93group.db.TaskDatabase
 
 //DONE
 //change pkg name
-//TODO ic_launcher
-//TODO new keystore 2022.09.05
+//ic_launcher
+//add new keystore 2022.09.05
 
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
