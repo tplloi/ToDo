@@ -23,6 +23,13 @@ import kotlinx.android.synthetic.main.view_drawer_end.*
 import kotlinx.android.synthetic.main.view_drawer_main.*
 import kotlinx.android.synthetic.main.view_drawer_start.view.*
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
 @LogTag("MainActivity")
 class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelectedListener {
 

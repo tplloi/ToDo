@@ -7,13 +7,19 @@ import com.loitpcore.core.utilities.LUIUtil
 import com.loitpcore.data.ActivityData
 import com.roy93group.db.TaskDatabase
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
 //TODO refactor codes
 
 //DONE
 //change pkg name
 //ic_launcher
 //add new keystore 2022.09.05
-
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
 

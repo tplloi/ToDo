@@ -3,6 +3,13 @@ package com.roy93group.model
 import androidx.annotation.Keep
 import org.greenrobot.eventbus.EventBus
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
 @Keep
 class MessageEvent {
     var msg: String? = null

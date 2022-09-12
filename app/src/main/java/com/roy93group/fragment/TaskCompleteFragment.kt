@@ -17,7 +17,14 @@ import kotlinx.android.synthetic.main.frm_task_all.*
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
-@LogTag("CompleteFragment")
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
+@LogTag("TaskCompleteFragment")
 class TaskCompleteFragment : BaseFragment() {
     private var mainViewModel: MainViewModel? = null
     private var concatAdapter = ConcatAdapter()

@@ -9,6 +9,13 @@ import com.loitpcore.service.liveData.ActionLiveData
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
 class MainViewModel : BaseViewModel() {
 
     val createTaskActionLiveData: ActionLiveData<ActionData<Task>> = ActionLiveData()

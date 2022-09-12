@@ -10,8 +10,8 @@ android {
         applicationId "com.roy93group.todo"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 20220309
-        versionName "1.0.20220309"
+        versionCode 20220912
+        versionName "1.0.20220912"
         multiDexEnabled true
         renderscriptTargetApi 19
         renderscriptSupportModeEnabled true    // Enable RS support
@@ -48,7 +48,7 @@ android {
 
     android.applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "ToDo_" + buildType.name + "_" + defaultConfig.versionName + "_" + defaultConfig.versionCode + ".apk"
+            outputFileName = archivesBaseName + "_" + buildType.name + "_" + defaultConfig.versionName + "_" + defaultConfig.versionCode + ".apk"
         }
     }
 
@@ -69,7 +69,7 @@ repositories {
 }
 
 dependencies {
-    api 'com.github.tplloi:basemaster:4.4.80'
+    api 'com.github.tplloi:basemaster:4.4.90'
     //https://github.com/shiburagi/Drawer-Behavior
     api 'com.infideap.drawerbehavior:drawer-behavior:1.0.1'
     //room

@@ -13,6 +13,13 @@ import com.loitpcore.views.setSafeOnClickListener
 import com.roy93group.R
 import kotlinx.android.synthetic.main.frm_task_create.*
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
 class TaskCreateFragment : BaseBottomSheetFragment(
     layoutId = R.layout.frm_task_create,
     height = WindowManager.LayoutParams.WRAP_CONTENT,

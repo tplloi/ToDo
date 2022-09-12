@@ -7,6 +7,13 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
 object TestUtil {
     private val viewModelJob = Job()
     private val ioContext = viewModelJob + Dispatchers.IO // background context

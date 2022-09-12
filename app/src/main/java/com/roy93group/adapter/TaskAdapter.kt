@@ -13,6 +13,13 @@ import com.loitpcore.views.setSafeOnClickListener
 import com.roy93group.R
 import kotlinx.android.synthetic.main.view_row_item_task.view.*
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
 @LogTag("TaskAdapter")
 class TaskAdapter : BaseAdapter() {
     private val listTask = ArrayList<Task>()
