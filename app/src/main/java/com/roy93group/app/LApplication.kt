@@ -26,7 +26,7 @@ class LApplication : BaseApplication() {
     override fun onCreate() {
         super.onCreate()
         // config activity transition default
-        ActivityData.instance.type = Constants.TYPE_ACTIVITY_TRANSITION_SLIDELEFT
+        ActivityData.instance.type = Constants.TYPE_ACTIVITY_TRANSITION_SLIDE_LEFT
         // config font
         LUIUtil.fontForAll = Constants.FONT_PATH
         TaskDatabase.getInstance(this)
