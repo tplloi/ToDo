@@ -21,6 +21,7 @@ import com.roy93group.db.TaskDatabase
 //TODO sort task
 //TODO color task
 //TODO update right drawer
+//TODO khi bat dark mode, luc tao task 2 cai text input layout color cua label bi sai
 
 //DONE
 //change pkg name

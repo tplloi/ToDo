@@ -47,7 +47,7 @@ class TaskCompleteFragment : BaseFragment() {
     }
 
     private fun setupViews() {
-        recyclerView.layoutManager = LinearLayoutManager(context)
+        rv.layoutManager = LinearLayoutManager(context)
         headerAdapter.setData(getString(R.string.complete))
         concatAdapter.addAdapter(headerAdapter)
         taskAdapter.onClickCbCompleteListener = { task ->
@@ -57,7 +57,7 @@ class TaskCompleteFragment : BaseFragment() {
             handleDeleteTask(task)
         }
         concatAdapter.addAdapter(taskAdapter)
-        recyclerView.adapter = concatAdapter
+        rv.adapter = concatAdapter
     }
 
     private fun setupViewModels() {
@@ -68,9 +68,9 @@ class TaskCompleteFragment : BaseFragment() {
                 val isSuccess = actionData.isSuccess
 
                 if (isDoing == true) {
-                    progressBar.showProgressBar()
+                    pbwp10.showProgressBar()
                 } else {
-                    progressBar.hideProgressBar()
+                    pbwp10.hideProgressBar()
                     if (isSuccess == true) {
                         actionData.data?.let { list ->
                             taskAdapter.setData(list)
@@ -82,17 +82,17 @@ class TaskCompleteFragment : BaseFragment() {
             vm.updateTaskActionLiveData.observe(viewLifecycleOwner) { actionData ->
                 val isDoing = actionData.isDoing
                 if (isDoing == true) {
-                    progressBar.showProgressBar()
+                    pbwp10.showProgressBar()
                 } else {
-                    progressBar.hideProgressBar()
+                    pbwp10.hideProgressBar()
                 }
             }
             vm.deleteTaskActionLiveData.observe(viewLifecycleOwner) { actionData ->
                 val isDoing = actionData.isDoing
                 if (isDoing == true) {
-                    progressBar.showProgressBar()
+                    pbwp10.showProgressBar()
                 } else {
-                    progressBar.hideProgressBar()
+                    pbwp10.hideProgressBar()
                 }
             }
         }

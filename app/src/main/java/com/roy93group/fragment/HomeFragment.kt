@@ -65,7 +65,7 @@ class HomeFragment : BaseFragment() {
     private fun goToNavAll() {
         LScreenUtil.replaceFragment(
             activity = requireActivity(),
-            containerFrameLayoutIdRes = R.id.fragmentContainerView,
+            containerFrameLayoutIdRes = R.id.fcv,
             fragment = TaskAllFragment(),
             isAddToBackStack = false
         )
@@ -74,7 +74,7 @@ class HomeFragment : BaseFragment() {
     private fun goToNavComplete() {
         LScreenUtil.replaceFragment(
             activity = requireActivity(),
-            containerFrameLayoutIdRes = R.id.fragmentContainerView,
+            containerFrameLayoutIdRes = R.id.fcv,
             fragment = TaskCompleteFragment(),
             isAddToBackStack = false
         )
@@ -83,7 +83,7 @@ class HomeFragment : BaseFragment() {
     private fun goToNavIncomplete() {
         LScreenUtil.replaceFragment(
             activity = requireActivity(),
-            containerFrameLayoutIdRes = R.id.fragmentContainerView,
+            containerFrameLayoutIdRes = R.id.fcv,
             fragment = TaskIncompleteFragment(),
             isAddToBackStack = false
         )
