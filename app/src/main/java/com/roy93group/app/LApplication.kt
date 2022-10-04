@@ -17,6 +17,10 @@ import com.roy93group.db.TaskDatabase
 
 //TODO rate app
 //TODO add bkg animation splash
+//TODO search task
+//TODO sort task
+//TODO color task
+//TODO update right drawer
 
 //DONE
 //change pkg name
@@ -27,6 +31,11 @@ class LApplication : BaseApplication() {
 
     override fun onCreate() {
         super.onCreate()
+
+        setupApp()
+    }
+
+    private fun setupApp() {
         ActivityData.instance.type = Constants.TYPE_ACTIVITY_TRANSITION_SLIDE_LEFT
         LUIUtil.fontForAll = Constants.FONT_PATH
         TaskDatabase.getInstance(this)

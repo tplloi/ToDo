@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
  * +840766040293
  * freuss47@gmail.com
  */
+@SuppressLint("CustomSplashScreen")
 @LogTag("SplashActivity")
 @IsFullScreen(false)
 class SplashActivity : BaseFontActivity() {
@@ -43,7 +44,7 @@ class SplashActivity : BaseFontActivity() {
                 goToHome()
             }
         )
-        textViewVersion.text = "Version ${BuildConfig.VERSION_NAME}"
+        tvVersion.text = "Version ${BuildConfig.VERSION_NAME}"
         tvPolicy.setOnClickListener {
             LSocialUtil.openBrowserPolicy(context = this)
         }

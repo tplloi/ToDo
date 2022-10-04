@@ -6,7 +6,7 @@
     android:background="?attr/themeBackgroundColor">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvLoitp"
+        android:id="@+id/tvRoy93Group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/ivLogo"
-        android:layout_below="@id/tvLoitp"
+        android:layout_below="@id/tvRoy93Group"
         android:layout_centerInParent="true"
         android:contentDescription="@string/app_name"
         android:gravity="center"
@@ -36,17 +36,17 @@
         android:src="@drawable/ic_launcher" />
 
     <ProgressBar
-        android:id="@+id/indicatorView"
+        android:id="@+id/pb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textViewVersion"
+        android:layout_above="@+id/tvVersion"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/margin_padding_medium"
         android:indeterminateTint="@color/colorPrimary" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textViewVersion"
+        android:id="@+id/tvVersion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tvPolicy"
