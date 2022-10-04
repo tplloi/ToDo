@@ -16,6 +16,7 @@ import com.roy93group.db.TaskDatabase
  */
 
 //TODO rate app
+//TODO add bkg animation splash
 
 //DONE
 //change pkg name
