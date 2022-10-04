@@ -11,7 +11,7 @@ import org.greenrobot.eventbus.EventBus
  * freuss47@gmail.com
  */
 @Keep
-class MessageEvent {
+class MessageEvent : java.io.Serializable {
     var msg: String? = null
 
     companion object {

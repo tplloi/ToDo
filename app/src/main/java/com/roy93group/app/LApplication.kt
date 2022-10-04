@@ -14,7 +14,8 @@ import com.roy93group.db.TaskDatabase
  * +840766040293
  * freuss47@gmail.com
  */
-//TODO refactor codes
+
+//TODO rate app
 
 //DONE
 //change pkg name
@@ -25,9 +26,7 @@ class LApplication : BaseApplication() {
 
     override fun onCreate() {
         super.onCreate()
-        // config activity transition default
         ActivityData.instance.type = Constants.TYPE_ACTIVITY_TRANSITION_SLIDE_LEFT
-        // config font
         LUIUtil.fontForAll = Constants.FONT_PATH
         TaskDatabase.getInstance(this)
     }

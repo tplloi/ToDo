@@ -10,8 +10,8 @@ android {
         applicationId "com.roy93group.todo"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 20220929
-        versionName "1.0.20220929"
+        versionCode 20221004
+        versionName "1.0.20221004"
         multiDexEnabled true
         renderscriptTargetApi 19
         renderscriptSupportModeEnabled true    // Enable RS support

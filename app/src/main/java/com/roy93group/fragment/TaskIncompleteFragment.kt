@@ -5,14 +5,14 @@ import android.view.View
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.loitpcore.annotation.LogTag
+import com.loitpcore.core.base.BaseFragment
+import com.roy93group.R
 import com.roy93group.adapter.HeaderAdapter
 import com.roy93group.adapter.TaskAdapter
 import com.roy93group.model.MessageEvent
 import com.roy93group.model.Task
 import com.roy93group.viewmodels.MainViewModel
-import com.loitpcore.annotation.LogTag
-import com.loitpcore.core.base.BaseFragment
-import com.roy93group.R
 import kotlinx.android.synthetic.main.frm_task_all.*
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -63,7 +63,7 @@ class TaskIncompleteFragment : BaseFragment() {
     private fun setupViewModels() {
         mainViewModel = getViewModel(MainViewModel::class.java)
         mainViewModel?.let { vm ->
-            vm.getListTaskIncompleteActionLiveData.observe(this, { actionData ->
+            vm.getListTaskIncompleteActionLiveData.observe(viewLifecycleOwner) { actionData ->
                 val isDoing = actionData.isDoing
                 val isSuccess = actionData.isSuccess
 
@@ -74,34 +74,34 @@ class TaskIncompleteFragment : BaseFragment() {
                     if (isSuccess == true) {
                         actionData.data?.let { list ->
                             taskAdapter.setData(list)
-                            tvNoData.isVisible = list.isNullOrEmpty()
+                            tvNoData.isVisible = list.isEmpty()
                         }
                     }
                 }
-            })
-            vm.updateTaskActionLiveData.observe(this, { actionData ->
+            }
+            vm.updateTaskActionLiveData.observe(viewLifecycleOwner) { actionData ->
                 val isDoing = actionData.isDoing
                 if (isDoing == true) {
                     progressBar.showProgressBar()
                 } else {
                     progressBar.hideProgressBar()
                 }
-            })
-            vm.deleteTaskActionLiveData.observe(this, { actionData ->
+            }
+            vm.deleteTaskActionLiveData.observe(viewLifecycleOwner) { actionData ->
                 val isDoing = actionData.isDoing
                 if (isDoing == true) {
                     progressBar.showProgressBar()
                 } else {
                     progressBar.hideProgressBar()
                 }
-            })
+            }
         }
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onMessageEvent(event: MessageEvent?) {
         event?.msg?.let {
-            logD(">>> onMessageEvent $it")
+//            logD(">>> onMessageEvent $it")
             getListTaskIncomplete()
         }
     }

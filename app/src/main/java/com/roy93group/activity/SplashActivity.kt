@@ -3,13 +3,13 @@ package com.roy93group.activity
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import com.roy93group.BuildConfig
 import com.loitpcore.annotation.IsFullScreen
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
 import com.loitpcore.core.utilities.LActivityUtil
 import com.loitpcore.core.utilities.LSocialUtil
 import com.loitpcore.core.utilities.LUIUtil
+import com.roy93group.BuildConfig
 import com.roy93group.R
 import kotlinx.android.synthetic.main.activity_splash.*
 

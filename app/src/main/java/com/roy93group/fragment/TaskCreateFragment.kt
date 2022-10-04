@@ -2,15 +2,17 @@ package com.roy93group.fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.*
+import android.view.MotionEvent
+import android.view.View
+import android.view.WindowManager
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.roy93group.activity.MainActivity
-import com.roy93group.model.Task
-import com.roy93group.viewmodels.MainViewModel
 import com.loitpcore.core.base.BaseBottomSheetFragment
 import com.loitpcore.views.setSafeOnClickListener
 import com.roy93group.R
+import com.roy93group.activity.MainActivity
+import com.roy93group.model.Task
+import com.roy93group.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.frm_task_create.*
 
 /**
@@ -51,7 +53,7 @@ class TaskCreateFragment : BaseBottomSheetFragment(
     private fun setupViewModels() {
         mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
         mainViewModel?.let { vm ->
-            vm.createTaskActionLiveData.observe(this, { actionData ->
+            vm.createTaskActionLiveData.observe(this) { actionData ->
                 val isDoing = actionData.isDoing
                 val isSuccess = actionData.isSuccess
 
@@ -68,7 +70,7 @@ class TaskCreateFragment : BaseBottomSheetFragment(
                         }
                     }
                 }
-            })
+            }
         }
     }
 
