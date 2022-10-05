@@ -15,13 +15,18 @@ import com.roy93group.db.TaskDatabase
  * freuss47@gmail.com
  */
 
+//TODO update right drawer
 //TODO rate app
 //TODO add bkg animation splash
+
 //TODO search task
 //TODO sort task
 //TODO color task
-//TODO update right drawer
 //TODO khi bat dark mode, luc tao task 2 cai text input layout color cua label bi sai
+//TODO type list, grid, short or detail
+//TODO task detail, chuyen nut delete vao trong screen detail
+//TODO man hinh setting cho custom type task, add type task vao left drawar
+//TODO left drawer cho them 1 cai mark (fav) task
 
 //DONE
 //change pkg name
