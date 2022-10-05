@@ -75,4 +75,6 @@ dependencies {
     api 'com.infideap.drawerbehavior:drawer-behavior:1.0.1'
     //room
     kapt "androidx.room:room-compiler:2.5.0-alpha03"
+//    https://github.com/Crysis21/PulsingView
+    api 'ro.holdone:pulseview:1.0.2'
 }

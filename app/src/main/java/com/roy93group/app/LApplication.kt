@@ -15,9 +15,7 @@ import com.roy93group.db.TaskDatabase
  * freuss47@gmail.com
  */
 
-//TODO update right drawer
-//TODO add bkg animation splash
-
+//TODO update right drawer -> show quote random
 //TODO search task
 //TODO sort task
 //TODO color task
@@ -32,6 +30,7 @@ import com.roy93group.db.TaskDatabase
 //ic_launcher
 //add new keystore 2022.09.05
 //rate app
+//add bkg animation splash
 
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
