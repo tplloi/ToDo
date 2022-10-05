@@ -135,6 +135,9 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
             R.id.navMoreApp -> {
                 LSocialUtil.moreApp(this)
             }
+            R.id.navPolicy -> {
+                LSocialUtil.openBrowserPolicy(this)
+            }
         }
 
         drawerLayout.closeDrawer(GravityCompat.START)
