@@ -15,7 +15,7 @@ import com.roy93group.db.TaskDatabase
  * freuss47@gmail.com
  */
 
-//TODO update right drawer -> show quote random
+//TODO update right drawer -> random quote
 //TODO search task
 //TODO sort task
 //TODO color task

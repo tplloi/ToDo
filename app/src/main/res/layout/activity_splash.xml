@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         app:autoplay="true"
         app:baseRadius="32dp"
-        app:pulseColor="?attr/themeTextColor"
+        app:pulseColor="@color/pulse"
         app:strokeWidth="5.0dp"
         app:waveDistance="45dp" />
 

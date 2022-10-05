@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import androidx.core.view.isVisible
 import com.google.android.material.navigation.NavigationView
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
@@ -15,6 +16,7 @@ import com.loitpcore.core.utilities.LImageUtil
 import com.loitpcore.core.utilities.LScreenUtil
 import com.loitpcore.core.utilities.LSocialUtil
 import com.loitpcore.core.utilities.LStoreUtil
+import com.roy93group.BuildConfig
 import com.roy93group.R
 import com.roy93group.fragment.HomeFragment
 import com.roy93group.fragment.SettingFragment
@@ -67,6 +69,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         )
 
         tvAd.text = LStoreUtil.readTxtFromRawFolder(nameOfRawFile = R.raw.infor)
+        tvAd.isVisible = BuildConfig.DEBUG
 
         switchHomeScreen()
     }
