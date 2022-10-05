@@ -129,7 +129,9 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                     isAddToBackStack = false
                 )
             }
-
+            R.id.navRateApp -> {
+                LSocialUtil.rateApp(this)
+            }
             R.id.navMoreApp -> {
                 LSocialUtil.moreApp(this)
             }

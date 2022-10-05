@@ -16,7 +16,6 @@ import com.roy93group.db.TaskDatabase
  */
 
 //TODO update right drawer
-//TODO rate app
 //TODO add bkg animation splash
 
 //TODO search task
@@ -32,6 +31,8 @@ import com.roy93group.db.TaskDatabase
 //change pkg name
 //ic_launcher
 //add new keystore 2022.09.05
+//rate app
+
 @LogTag("LApplication")
 class LApplication : BaseApplication() {
 
