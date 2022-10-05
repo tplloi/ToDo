@@ -13,6 +13,13 @@ import com.loitpcore.core.utilities.LUIUtil
 import com.roy93group.R
 import kotlinx.android.synthetic.main.frm_setting.*
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
 @LogTag("SettingFragment")
 class SettingFragment : BaseFragment() {
     private var dialog: AlertDialog? = null

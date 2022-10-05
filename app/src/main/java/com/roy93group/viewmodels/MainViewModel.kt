@@ -1,14 +1,22 @@
 package com.roy93group.viewmodels
 
-import com.roy93group.db.TaskDatabase
-import com.roy93group.model.MessageEvent
-import com.roy93group.model.Task
 import com.loitpcore.core.base.BaseViewModel
 import com.loitpcore.service.liveData.ActionData
 import com.loitpcore.service.liveData.ActionLiveData
+import com.roy93group.BuildConfig
+import com.roy93group.db.TaskDatabase
+import com.roy93group.model.MessageEvent
+import com.roy93group.model.Task
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
 class MainViewModel : BaseViewModel() {
 
     val createTaskActionLiveData: ActionLiveData<ActionData<Task>> = ActionLiveData()
@@ -24,7 +32,9 @@ class MainViewModel : BaseViewModel() {
             ActionData(isDoing = true)
         )
         ioScope.launch {
-            delay(500) // delay for demo purpose
+            if (BuildConfig.DEBUG) {
+                delay(500) // delay for demo purpose
+            }
             TaskDatabase.instance?.taskDao()?.insert(task)
             MessageEvent.postMsg(MessageEvent.CREATE_TASK)
             createTaskActionLiveData.post(
@@ -42,7 +52,9 @@ class MainViewModel : BaseViewModel() {
             ActionData(isDoing = true)
         )
         ioScope.launch {
-//            delay(500) // delay for demo purpose
+            if (BuildConfig.DEBUG) {
+                delay(500) // delay for demo purpose
+            }
             val list = TaskDatabase.instance?.taskDao()?.getListTaskAll()
             getListTaskAllActionLiveData.post(
                 ActionData(
@@ -59,7 +71,9 @@ class MainViewModel : BaseViewModel() {
             ActionData(isDoing = true)
         )
         ioScope.launch {
-//            delay(500) // delay for demo purpose
+            if (BuildConfig.DEBUG) {
+                delay(500) // delay for demo purpose
+            }
             val list = TaskDatabase.instance?.taskDao()?.getListTaskComplete()
             getListTaskCompleteActionLiveData.post(
                 ActionData(
@@ -76,7 +90,9 @@ class MainViewModel : BaseViewModel() {
             ActionData(isDoing = true)
         )
         ioScope.launch {
-//            delay(500) // delay for demo purpose
+            if (BuildConfig.DEBUG) {
+                delay(500) // delay for demo purpose
+            }
             val list = TaskDatabase.instance?.taskDao()?.getListTaskIncomplete()
             getListTaskIncompleteActionLiveData.post(
                 ActionData(
@@ -93,7 +109,9 @@ class MainViewModel : BaseViewModel() {
             ActionData(isDoing = true)
         )
         ioScope.launch {
-            delay(500) // delay for demo purpose
+            if (BuildConfig.DEBUG) {
+                delay(500) // delay for demo purpose
+            }
             TaskDatabase.instance?.taskDao()?.update(task)
             MessageEvent.postMsg(MessageEvent.UPDATE_TASK)
             updateTaskActionLiveData.post(
@@ -111,7 +129,9 @@ class MainViewModel : BaseViewModel() {
             ActionData(isDoing = true)
         )
         ioScope.launch {
-            delay(500) // delay for demo purpose
+            if (BuildConfig.DEBUG) {
+                delay(500) // delay for demo purpose
+            }
             TaskDatabase.instance?.taskDao()?.delete(task)
             MessageEvent.postMsg(MessageEvent.DELETE_TASK)
             deleteTaskActionLiveData.post(

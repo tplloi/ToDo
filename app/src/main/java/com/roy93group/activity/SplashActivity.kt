@@ -3,16 +3,24 @@ package com.roy93group.activity
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import com.roy93group.BuildConfig
 import com.loitpcore.annotation.IsFullScreen
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
 import com.loitpcore.core.utilities.LActivityUtil
 import com.loitpcore.core.utilities.LSocialUtil
 import com.loitpcore.core.utilities.LUIUtil
+import com.roy93group.BuildConfig
 import com.roy93group.R
 import kotlinx.android.synthetic.main.activity_splash.*
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
+@SuppressLint("CustomSplashScreen")
 @LogTag("SplashActivity")
 @IsFullScreen(false)
 class SplashActivity : BaseFontActivity() {
@@ -36,7 +44,7 @@ class SplashActivity : BaseFontActivity() {
                 goToHome()
             }
         )
-        textViewVersion.text = "Version ${BuildConfig.VERSION_NAME}"
+        tvVersion.text = "Version ${BuildConfig.VERSION_NAME}"
         tvPolicy.setOnClickListener {
             LSocialUtil.openBrowserPolicy(context = this)
         }

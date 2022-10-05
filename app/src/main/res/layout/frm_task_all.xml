@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/themeBackgroundColorMedium"
-    android:orientation="vertical">
+    android:background="?attr/themeBackgroundColorMedium">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rv"
         style="@style/ScrollVertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
@@ -28,7 +27,7 @@
         tools:visibility="visible" />
 
     <com.loitpcore.views.progressLoadingView.window.WP10ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/pbwp10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

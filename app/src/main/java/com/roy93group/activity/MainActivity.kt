@@ -8,21 +8,30 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import androidx.core.view.isVisible
 import com.google.android.material.navigation.NavigationView
-import com.roy93group.fragment.HomeFragment
-import com.roy93group.fragment.SettingFragment
 import com.loitpcore.annotation.LogTag
 import com.loitpcore.core.base.BaseFontActivity
 import com.loitpcore.core.utilities.LImageUtil
 import com.loitpcore.core.utilities.LScreenUtil
 import com.loitpcore.core.utilities.LSocialUtil
 import com.loitpcore.core.utilities.LStoreUtil
+import com.roy93group.BuildConfig
 import com.roy93group.R
+import com.roy93group.fragment.HomeFragment
+import com.roy93group.fragment.SettingFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.view_drawer_end.*
 import kotlinx.android.synthetic.main.view_drawer_main.*
 import kotlinx.android.synthetic.main.view_drawer_start.view.*
 
+/**
+ * Created by Loitp on 12.09.2022
+ * Galaxy One company,
+ * Vietnam
+ * +840766040293
+ * freuss47@gmail.com
+ */
 @LogTag("MainActivity")
 class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -60,6 +69,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         )
 
         tvAd.text = LStoreUtil.readTxtFromRawFolder(nameOfRawFile = R.raw.infor)
+        tvAd.isVisible = BuildConfig.DEBUG
 
         switchHomeScreen()
     }
@@ -70,21 +80,36 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
     }
 
     private var doubleBackToExitPressedOnce = false
-    override fun onBackPressed() {
+    override fun onBaseBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
         } else {
             if (doubleBackToExitPressedOnce) {
-                super.onBackPressed()
+                super.onBaseBackPressed()
                 return
             }
             this.doubleBackToExitPressedOnce = true
-            showShortInformation(getString(R.string.press_again_to_exit), isTopAnchor = false)
+            showShortInformation(msg = getString(R.string.press_again_to_exit), isTopAnchor = false)
             Handler(Looper.getMainLooper()).postDelayed({
                 doubleBackToExitPressedOnce = false
             }, 2000)
         }
     }
+//    override fun onBackPressed() {
+//        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+//            drawerLayout.closeDrawer(GravityCompat.START)
+//        } else {
+//            if (doubleBackToExitPressedOnce) {
+//                super.onBackPressed()
+//                return
+//            }
+//            this.doubleBackToExitPressedOnce = true
+//            showShortInformation(getString(R.string.press_again_to_exit), isTopAnchor = false)
+//            Handler(Looper.getMainLooper()).postDelayed({
+//                doubleBackToExitPressedOnce = false
+//            }, 2000)
+//        }
+//    }
 
     private var currentItemId = R.id.navHome
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -107,9 +132,14 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
                     isAddToBackStack = false
                 )
             }
-
+            R.id.navRateApp -> {
+                LSocialUtil.rateApp(this)
+            }
             R.id.navMoreApp -> {
                 LSocialUtil.moreApp(this)
+            }
+            R.id.navPolicy -> {
+                LSocialUtil.openBrowserPolicy(this)
             }
         }
 
