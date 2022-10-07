@@ -1,25 +1,5 @@
-﻿Requirement:
-
-Writing a TO DO application include 3 screens:
-- All: Showing both complete and incomplete TO DO.
-- Complete: Showing complete TO DO.
-- Incomplete: Show incomplete TO DO.
-- Having a Bottom navigation bar to switch between the above screens.
-
-Business logic: 
-- Having an “Create task” UI to create a new TO DO.
-- Each TO DO has a checkbox, to change its status between complete and incomplete.
-- When interacting (Create task or Change task’s status), the UI (TO DO list, checkbox) must be updated.
-- If you can handle saving and updating TO DO tasks in the local database, it will be a plus.
-
-Technical:
-- MUST HAVE unit tests. Automation testing is our culture. We would mark the assignment as failed if you don’t submit the assignment with meaningful unit tests.
-
-References
-- https://flutter.dev/docs/cookbook/testing
-- https://codelabs.developers.google.com/codelabs/flutter-app-test ing
-
-Having widget tests and integration tests is a plus.
-- You can use any architecture you want, but the architecture must describe 3 layers: Presentation layer, Domain (Business) layer and Data Access layer.
-- Use appropriate data structures.
-- The assignment can be implemented with either Dart (Flutter) or a native iOS/Android language.
+﻿There's nothing wrong with a paper to-do list, but going digital has its benefits.
+Paper is fine if you enjoy writing by hand, crossing off tasks in ink or pencil, and drawing arrows to show when priorities and deadlines change.
+The best to-do list apps, however, let you write, organize, and reprioritize your tasks more efficiently.
+They also let you attach notes, links, and files to a task, and the very best ones also let you see when someone else has completed a task.
+In many ways, a good to-do program is the ultimate productivity app.

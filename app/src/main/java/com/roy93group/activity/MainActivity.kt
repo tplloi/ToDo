@@ -69,7 +69,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         )
 
         tvAd.text = LStoreUtil.readTxtFromRawFolder(nameOfRawFile = R.raw.infor)
-        tvAd.isVisible = BuildConfig.DEBUG
+//        tvAd.isVisible = BuildConfig.DEBUG
 
         switchHomeScreen()
     }
