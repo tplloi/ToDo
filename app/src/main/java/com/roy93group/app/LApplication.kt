@@ -22,7 +22,7 @@ import com.roy93group.db.TaskDatabase
 //TODO khi bat dark mode, luc tao task 2 cai text input layout color cua label bi sai
 //TODO type list, grid, short or detail
 //TODO task detail, chuyen nut delete vao trong screen detail
-//TODO man hinh setting cho custom type task, add type task vao left drawar
+//TODO man hinh setting cho custom type task, add type task vao left drawer
 //TODO left drawer cho them 1 cai mark (fav) task
 
 //DONE
