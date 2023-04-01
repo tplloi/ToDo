@@ -23,6 +23,7 @@ import com.roy93group.db.TaskDatabase
 //TODO task detail, chuyen nut delete vao trong screen detail
 //TODO man hinh setting cho custom type task, add type task vao left drawer
 //TODO left drawer cho them 1 cai mark (fav) task
+//TODO finger lock
 
 //DONE
 //change pkg name
