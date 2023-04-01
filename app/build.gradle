@@ -10,8 +10,8 @@ android {
         applicationId "com.roy93group.todo"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 20221007
-        versionName "2022.10.07"
+        versionCode 20230331
+        versionName "2023.03.31"
         multiDexEnabled true
         renderscriptTargetApi 19
         renderscriptSupportModeEnabled true    // Enable RS support
@@ -74,7 +74,7 @@ dependencies {
     //https://github.com/shiburagi/Drawer-Behavior
     api 'com.infideap.drawerbehavior:drawer-behavior:1.0.1'
     //room
-    kapt "androidx.room:room-compiler:2.5.0-alpha03"
+    kapt "androidx.room:room-compiler:2.6.0-alpha01"
 //    https://github.com/Crysis21/PulsingView
     api 'ro.holdone:pulseview:1.0.2'
 }
