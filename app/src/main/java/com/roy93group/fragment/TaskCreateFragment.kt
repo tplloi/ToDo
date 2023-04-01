@@ -94,5 +94,6 @@ class TaskCreateFragment : BaseBottomSheetFragment(
             this.description = description
         }
         mainViewModel?.createTask(task)
+        (activity as MainActivity?)?.showAd()
     }
 }
