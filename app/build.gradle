@@ -10,8 +10,8 @@ android {
         applicationId "com.roy93group.todo"
         minSdkVersion 24
         targetSdkVersion 33
-        versionCode 20221004
-        versionName "1.0.20221004"
+        versionCode 20230331
+        versionName "2023.03.31"
         multiDexEnabled true
         renderscriptTargetApi 19
         renderscriptSupportModeEnabled true    // Enable RS support
@@ -62,6 +62,31 @@ android {
         test { java.srcDirs = ['src/test/java'] }
     }
     namespace 'com.roy93group'
+
+    flavorDimensions "type"
+    productFlavors {
+
+        dev {
+//            applicationId = "com.roy93group.todo.dev"
+            dimension "type"
+            buildConfigField("String", "FLAVOR_buildEnv", '"dev"')
+            resValue "string", "app_name", "To Do DEV"
+            resValue("string", "SDK_KEY", "e75FnQfS9XTTqM1Kne69U7PW_MBgAnGQTFvtwVVui6kRPKs5L7ws9twr5IQWwVfzPKZ5pF2IfDa7lguMgGlCyt")
+            resValue "string", "BANNER", "2ff20bf2e6ae3612"
+            resValue "string", "INTER", "48fb6691257c91b6"
+        }
+
+        production {
+//            applicationId = "com.roy93group.todo.prod"
+            dimension "type"
+            buildConfigField("String", "FLAVOR_buildEnv", '"prod"')
+            resValue "string", "app_name", "To Do"
+            resValue("string", "SDK_KEY", "e75FnQfS9XTTqM1Kne69U7PW_MBgAnGQTFvtwVVui6kRPKs5L7ws9twr5IQWwVfzPKZ5pF2IfDa7lguMgGlCyt")
+            resValue "string", "BANNER", "2ff20bf2e6ae3612"
+            resValue "string", "INTER", "48fb6691257c91b6"
+        }
+
+    }
 }
 
 repositories {
@@ -70,11 +95,12 @@ repositories {
 }
 
 dependencies {
-    api 'com.github.tplloi:basemaster:4.4.91'
+    api 'com.github.tplloi:base:4.6.35'
     //https://github.com/shiburagi/Drawer-Behavior
     api 'com.infideap.drawerbehavior:drawer-behavior:1.0.1'
     //room
-    kapt "androidx.room:room-compiler:2.5.0-alpha03"
+    kapt "androidx.room:room-compiler:2.6.0-alpha01"
 //    https://github.com/Crysis21/PulsingView
     api 'ro.holdone:pulseview:1.0.2'
+    implementation 'com.applovin:applovin-sdk:11.8.2'
 }

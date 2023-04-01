@@ -2,10 +2,10 @@ package com.roy93group.fragment
 
 import android.os.Bundle
 import android.view.View
-import com.loitpcore.annotation.LogTag
-import com.loitpcore.core.base.BaseFragment
-import com.loitpcore.core.utilities.LScreenUtil
-import com.loitpcore.views.setSafeOnClickListener
+import com.loitp.annotation.LogTag
+import com.loitp.core.base.BaseFragment
+import com.loitp.core.ext.replaceFragment
+import com.loitp.core.ext.setSafeOnClickListener
 import com.roy93group.R
 import kotlinx.android.synthetic.main.frm_home.*
 
@@ -63,8 +63,7 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun goToNavAll() {
-        LScreenUtil.replaceFragment(
-            activity = requireActivity(),
+        activity?.replaceFragment(
             containerFrameLayoutIdRes = R.id.fcv,
             fragment = TaskAllFragment(),
             isAddToBackStack = false
@@ -72,8 +71,7 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun goToNavComplete() {
-        LScreenUtil.replaceFragment(
-            activity = requireActivity(),
+        activity?.replaceFragment(
             containerFrameLayoutIdRes = R.id.fcv,
             fragment = TaskCompleteFragment(),
             isAddToBackStack = false
@@ -81,8 +79,7 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun goToNavIncomplete() {
-        LScreenUtil.replaceFragment(
-            activity = requireActivity(),
+        activity?.replaceFragment(
             containerFrameLayoutIdRes = R.id.fcv,
             fragment = TaskIncompleteFragment(),
             isAddToBackStack = false

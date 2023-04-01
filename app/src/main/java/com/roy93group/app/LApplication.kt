@@ -1,10 +1,9 @@
 package com.roy93group.app
 
-import com.loitpcore.annotation.LogTag
-import com.loitpcore.core.base.BaseApplication
-import com.loitpcore.core.common.Constants
-import com.loitpcore.core.utilities.LUIUtil
-import com.loitpcore.data.ActivityData
+import com.loitp.annotation.LogTag
+import com.loitp.core.base.BaseApplication
+import com.loitp.core.common.TYPE_ACTIVITY_TRANSITION_SLIDE_LEFT
+import com.loitp.data.ActivityData
 import com.roy93group.db.TaskDatabase
 
 /**
@@ -22,8 +21,9 @@ import com.roy93group.db.TaskDatabase
 //TODO khi bat dark mode, luc tao task 2 cai text input layout color cua label bi sai
 //TODO type list, grid, short or detail
 //TODO task detail, chuyen nut delete vao trong screen detail
-//TODO man hinh setting cho custom type task, add type task vao left drawar
+//TODO man hinh setting cho custom type task, add type task vao left drawer
 //TODO left drawer cho them 1 cai mark (fav) task
+//TODO finger lock
 
 //DONE
 //change pkg name
@@ -42,8 +42,8 @@ class LApplication : BaseApplication() {
     }
 
     private fun setupApp() {
-        ActivityData.instance.type = Constants.TYPE_ACTIVITY_TRANSITION_SLIDE_LEFT
-        LUIUtil.fontForAll = Constants.FONT_PATH
+        ActivityData.instance.type = TYPE_ACTIVITY_TRANSITION_SLIDE_LEFT
+//        fontForAll = FONT_PATH
         TaskDatabase.getInstance(this)
     }
 }

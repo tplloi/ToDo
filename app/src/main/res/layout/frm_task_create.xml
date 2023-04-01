@@ -61,9 +61,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/themeBackgroundColorMedium"
+            android:gravity="start|top
+"
             android:hint="@string/enter_your_description"
             android:inputType="textMultiLine"
             android:maxLines="7"
+            android:minLines="3"
             android:overScrollMode="always"
             android:scrollbarStyle="insideInset"
             android:scrollbars="vertical"

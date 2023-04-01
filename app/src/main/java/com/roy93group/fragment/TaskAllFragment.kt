@@ -5,8 +5,8 @@ import android.view.View
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.loitpcore.annotation.LogTag
-import com.loitpcore.core.base.BaseFragment
+import com.loitp.annotation.LogTag
+import com.loitp.core.base.BaseFragment
 import com.roy93group.R
 import com.roy93group.adapter.HeaderAdapter
 import com.roy93group.adapter.TaskAdapter

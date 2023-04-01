@@ -2,8 +2,8 @@ package com.roy93group.db
 
 import androidx.room.Dao
 import androidx.room.Query
+import com.loitp.core.base.BaseDao
 import com.roy93group.model.Task
-import com.loitpcore.core.base.BaseDao
 
 /**
  * Created by Loitp on 12.09.2022

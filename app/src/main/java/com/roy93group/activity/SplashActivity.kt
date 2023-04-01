@@ -1,14 +1,12 @@
 package com.roy93group.activity
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
-import com.loitpcore.annotation.IsFullScreen
-import com.loitpcore.annotation.LogTag
-import com.loitpcore.core.base.BaseFontActivity
-import com.loitpcore.core.utilities.LActivityUtil
-import com.loitpcore.core.utilities.LSocialUtil
-import com.loitpcore.core.utilities.LUIUtil
+import com.loitp.annotation.IsFullScreen
+import com.loitp.annotation.LogTag
+import com.loitp.core.base.BaseActivityFont
+import com.loitp.core.ext.openBrowserPolicy
+import com.loitp.core.ext.setDelay
 import com.roy93group.BuildConfig
 import com.roy93group.R
 import kotlinx.android.synthetic.main.activity_splash.*
@@ -23,7 +21,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
 @SuppressLint("CustomSplashScreen")
 @LogTag("SplashActivity")
 @IsFullScreen(false)
-class SplashActivity : BaseFontActivity() {
+class SplashActivity : BaseActivityFont() {
 
     override fun setLayoutResourceId(): Int {
         return R.layout.activity_splash
@@ -38,7 +36,7 @@ class SplashActivity : BaseFontActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun setupViews() {
-        LUIUtil.setDelay(
+        setDelay(
             mls = 1500,
             runnable = {
                 goToHome()
@@ -46,14 +44,12 @@ class SplashActivity : BaseFontActivity() {
         )
         tvVersion.text = "Version ${BuildConfig.VERSION_NAME}"
         tvPolicy.setOnClickListener {
-            LSocialUtil.openBrowserPolicy(context = this)
+            this.openBrowserPolicy()
         }
     }
 
     private fun goToHome() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        LActivityUtil.tranIn(this)
+        launchActivity(MainActivity::class.java)
         this.finishAfterTransition()
     }
 }

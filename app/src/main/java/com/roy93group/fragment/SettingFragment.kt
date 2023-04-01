@@ -4,13 +4,14 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import com.roy93group.activity.MainActivity
-import com.loitpcore.annotation.LogTag
-import com.loitpcore.core.base.BaseFragment
-import com.loitpcore.core.utilities.LActivityUtil
-import com.loitpcore.core.utilities.LDialogUtil
-import com.loitpcore.core.utilities.LUIUtil
+import com.loitp.annotation.LogTag
+import com.loitp.core.base.BaseFragment
+import com.loitp.core.ext.isDarkTheme
+import com.loitp.core.ext.setDarkTheme
+import com.loitp.core.ext.showDialog2
+import com.loitp.core.ext.transActivityNoAnimation
 import com.roy93group.R
+import com.roy93group.activity.MainActivity
 import kotlinx.android.synthetic.main.frm_setting.*
 
 /**
@@ -41,7 +42,7 @@ class SettingFragment : BaseFragment() {
     }
 
     private fun setupViews() {
-        val isDarkTheme = LUIUtil.isDarkTheme()
+        val isDarkTheme = context?.isDarkTheme() ?: false
         swEnableDarkMode.isChecked = isDarkTheme
 
         swEnableDarkMode.setOnCheckedChangeListener { _, isChecked ->
@@ -54,39 +55,36 @@ class SettingFragment : BaseFragment() {
 
     private fun handleSwitchDarkTheme(isChecked: Boolean) {
         context?.let { c ->
-            val isDarkTheme = LUIUtil.isDarkTheme()
+            val isDarkTheme = c.isDarkTheme()
             if (isDarkTheme == isChecked) {
                 return@let
             }
 
-            dialog = LDialogUtil.showDialog2(
-                context = c,
+            dialog = c.showDialog2(
                 title = getString(R.string.warning),
                 msg = getString(R.string.this_app_will_be_restarted),
                 button1 = getString(R.string.cancel),
                 button2 = getString(R.string.ok),
                 onClickButton1 = {
-                    swEnableDarkMode?.isChecked = LUIUtil.isDarkTheme()
+                    swEnableDarkMode?.isChecked = c.isDarkTheme()
                 },
                 onClickButton2 = {
                     if (isChecked) {
-                        LUIUtil.setDarkTheme(isDarkTheme = true)
+                        c.setDarkTheme(isDarkTheme = true)
                     } else {
-                        LUIUtil.setDarkTheme(isDarkTheme = false)
+                        c.setDarkTheme(isDarkTheme = false)
                     }
 
                     val intent = Intent(context, MainActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
                     startActivity(intent)
-                    context?.let {
-                        LActivityUtil.transActivityNoAnimation(it)
-                    }
+                    c.transActivityNoAnimation()
 
                     dialog?.dismiss()
                 }
             )
             dialog?.setOnCancelListener {
-                swEnableDarkMode?.isChecked = LUIUtil.isDarkTheme()
+                swEnableDarkMode?.isChecked = c.isDarkTheme()
             }
         }
     }

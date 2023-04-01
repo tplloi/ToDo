@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.loitpcore.annotation.LogTag
-import com.loitpcore.core.adapter.BaseAdapter
+import com.loitp.annotation.LogTag
+import com.loitp.core.adapter.BaseAdapter
 import com.roy93group.R
 import kotlinx.android.synthetic.main.view_row_item_header.view.*
 
