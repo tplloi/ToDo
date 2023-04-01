@@ -1,5 +1,6 @@
 package com.roy93group.activity
 
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,6 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
+import com.applovin.mediation.ads.MaxAdView
 import com.google.android.material.navigation.NavigationView
 import com.loitp.annotation.LogTag
 import com.loitp.core.base.BaseActivityFont
@@ -15,6 +17,7 @@ import com.loitp.core.ext.*
 import com.roy93group.R
 import com.roy93group.fragment.HomeFragment
 import com.roy93group.fragment.SettingFragment
+import com.roy93group.helper.Applovin
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.view_drawer_end.*
 import kotlinx.android.synthetic.main.view_drawer_main.*
@@ -34,6 +37,8 @@ class MainActivity : BaseActivityFont(), NavigationView.OnNavigationItemSelected
         return R.layout.activity_main
     }
 
+    private var adView: MaxAdView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -42,6 +47,13 @@ class MainActivity : BaseActivityFont(), NavigationView.OnNavigationItemSelected
 
     private fun setupViews() {
         setSupportActionBar(toolbar)
+        adView = Applovin.createAdBanner(
+            a = this,
+            logTag = logTag,
+            bkgColor = Color.CYAN,
+            viewGroup = flAd,
+            isAdaptiveBanner = true,
+        )
 
         val toggle = ActionBarDrawerToggle(
             this,
@@ -67,6 +79,11 @@ class MainActivity : BaseActivityFont(), NavigationView.OnNavigationItemSelected
         switchHomeScreen()
     }
 
+    override fun onDestroy() {
+        adView?.destroy()
+        super.onDestroy()
+    }
+
     private fun switchHomeScreen() {
         navViewStart.menu.performIdentifierAction(R.id.navHome, 0)
         navViewStart.menu.findItem(R.id.navHome).isChecked = true
@@ -88,21 +105,6 @@ class MainActivity : BaseActivityFont(), NavigationView.OnNavigationItemSelected
             }, 2000)
         }
     }
-//    override fun onBackPressed() {
-//        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-//            drawerLayout.closeDrawer(GravityCompat.START)
-//        } else {
-//            if (doubleBackToExitPressedOnce) {
-//                super.onBackPressed()
-//                return
-//            }
-//            this.doubleBackToExitPressedOnce = true
-//            showShortInformation(getString(R.string.press_again_to_exit), isTopAnchor = false)
-//            Handler(Looper.getMainLooper()).postDelayed({
-//                doubleBackToExitPressedOnce = false
-//            }, 2000)
-//        }
-//    }
 
     private var currentItemId = R.id.navHome
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
