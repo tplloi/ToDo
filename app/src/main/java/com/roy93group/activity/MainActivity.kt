@@ -1,6 +1,5 @@
 package com.roy93group.activity
 
-import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -59,7 +58,7 @@ class MainActivity : BaseActivityFont(), NavigationView.OnNavigationItemSelected
         adView = Applovin.createAdBanner(
             a = this,
             logTag = logTag,
-            bkgColor = Color.CYAN,
+            bkgColor = getColor(R.color.colorPrimary),
             viewGroup = flAd,
             isAdaptiveBanner = true,
         )
