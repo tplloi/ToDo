@@ -1,10 +1,9 @@
 package com.roy93group.app
 
-import com.loitpcore.annotation.LogTag
-import com.loitpcore.core.base.BaseApplication
-import com.loitpcore.core.common.Constants
-import com.loitpcore.core.utilities.LUIUtil
-import com.loitpcore.data.ActivityData
+import com.loitp.annotation.LogTag
+import com.loitp.core.base.BaseApplication
+import com.loitp.core.common.TYPE_ACTIVITY_TRANSITION_SLIDE_LEFT
+import com.loitp.data.ActivityData
 import com.roy93group.db.TaskDatabase
 
 /**
@@ -42,8 +41,8 @@ class LApplication : BaseApplication() {
     }
 
     private fun setupApp() {
-        ActivityData.instance.type = Constants.TYPE_ACTIVITY_TRANSITION_SLIDE_LEFT
-        LUIUtil.fontForAll = Constants.FONT_PATH
+        ActivityData.instance.type = TYPE_ACTIVITY_TRANSITION_SLIDE_LEFT
+//        fontForAll = FONT_PATH
         TaskDatabase.getInstance(this)
     }
 }

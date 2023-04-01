@@ -8,15 +8,10 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
-import androidx.core.view.isVisible
 import com.google.android.material.navigation.NavigationView
-import com.loitpcore.annotation.LogTag
-import com.loitpcore.core.base.BaseFontActivity
-import com.loitpcore.core.utilities.LImageUtil
-import com.loitpcore.core.utilities.LScreenUtil
-import com.loitpcore.core.utilities.LSocialUtil
-import com.loitpcore.core.utilities.LStoreUtil
-import com.roy93group.BuildConfig
+import com.loitp.annotation.LogTag
+import com.loitp.core.base.BaseActivityFont
+import com.loitp.core.ext.*
 import com.roy93group.R
 import com.roy93group.fragment.HomeFragment
 import com.roy93group.fragment.SettingFragment
@@ -33,7 +28,7 @@ import kotlinx.android.synthetic.main.view_drawer_start.view.*
  * freuss47@gmail.com
  */
 @LogTag("MainActivity")
-class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : BaseActivityFont(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun setLayoutResourceId(): Int {
         return R.layout.activity_main
@@ -62,13 +57,11 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         drawerLayout.useCustomBehavior(Gravity.END)
 
         // cover
-        LImageUtil.load(
-            context = this,
+        navViewStart.getHeaderView(0).ivCover.loadGlide(
             any = getString(R.string.link_cover),
-            imageView = navViewStart.getHeaderView(0).ivCover
         )
 
-        tvAd.text = LStoreUtil.readTxtFromRawFolder(nameOfRawFile = R.raw.infor)
+        tvAd.text = readTxtFromRawFolder(nameOfRawFile = R.raw.infor)
 //        tvAd.isVisible = BuildConfig.DEBUG
 
         switchHomeScreen()
@@ -116,8 +109,7 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
         when (item.itemId) {
             R.id.navHome -> {
                 currentItemId = R.id.navHome
-                LScreenUtil.replaceFragment(
-                    activity = this,
+                this.replaceFragment(
                     containerFrameLayoutIdRes = R.id.flContainer,
                     fragment = HomeFragment(),
                     isAddToBackStack = false
@@ -125,21 +117,20 @@ class MainActivity : BaseFontActivity(), NavigationView.OnNavigationItemSelected
             }
             R.id.navSetting -> {
                 currentItemId = R.id.navSetting
-                LScreenUtil.replaceFragment(
-                    activity = this,
+                this.replaceFragment(
                     containerFrameLayoutIdRes = R.id.flContainer,
                     fragment = SettingFragment(),
                     isAddToBackStack = false
                 )
             }
             R.id.navRateApp -> {
-                LSocialUtil.rateApp(this)
+                this.rateApp()
             }
             R.id.navMoreApp -> {
-                LSocialUtil.moreApp(this)
+                this.moreApp()
             }
             R.id.navPolicy -> {
-                LSocialUtil.openBrowserPolicy(this)
+                this.openBrowserPolicy()
             }
         }
 

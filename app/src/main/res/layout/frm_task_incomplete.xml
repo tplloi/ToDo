@@ -27,7 +27,7 @@
         app:drawableTint="?attr/themeTextColor"
         tools:visibility="visible" />
 
-    <com.loitpcore.views.progressLoadingView.window.WP10ProgressBar
+    <com.loitp.views.loading.window.WP10ProgressBar
         android:id="@+id/pbwp10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

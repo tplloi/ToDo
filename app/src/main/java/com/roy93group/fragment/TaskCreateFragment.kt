@@ -7,8 +7,8 @@ import android.view.View
 import android.view.WindowManager
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.loitpcore.core.base.BaseBottomSheetFragment
-import com.loitpcore.views.setSafeOnClickListener
+import com.loitp.core.base.BaseBottomSheetFragment
+import com.loitp.core.ext.setSafeOnClickListener
 import com.roy93group.R
 import com.roy93group.activity.MainActivity
 import com.roy93group.model.Task

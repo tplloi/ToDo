@@ -1,8 +1,8 @@
 package com.roy93group.viewmodels
 
-import com.loitpcore.core.base.BaseViewModel
-import com.loitpcore.service.liveData.ActionData
-import com.loitpcore.service.liveData.ActionLiveData
+import com.loitp.core.base.BaseViewModel
+import com.loitp.sv.liveData.ActionData
+import com.loitp.sv.liveData.ActionLiveData
 import com.roy93group.BuildConfig
 import com.roy93group.db.TaskDatabase
 import com.roy93group.model.MessageEvent

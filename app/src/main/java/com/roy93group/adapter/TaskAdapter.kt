@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.loitpcore.annotation.LogTag
-import com.loitpcore.core.adapter.BaseAdapter
-import com.loitpcore.core.utilities.LDateUtil
-import com.loitpcore.views.setSafeOnClickListener
+import com.loitp.annotation.LogTag
+import com.loitp.core.adapter.BaseAdapter
+import com.loitp.core.ext.getDateCurrentTimeZoneMls
+import com.loitp.core.ext.setSafeOnClickListener
 import com.roy93group.R
 import com.roy93group.model.Task
 import kotlinx.android.synthetic.main.view_row_item_task.view.*
@@ -36,8 +36,7 @@ class TaskAdapter : BaseAdapter() {
     inner class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(task: Task) {
-            itemView.tvDate.text =
-                LDateUtil.getDateCurrentTimeZoneMls(task.id.toLong(), "dd-MM-yyyy HH:mm:ss")
+            itemView.tvDate.text = task.id.toLong().getDateCurrentTimeZoneMls("dd-MM-yyyy HH:mm:ss")
             itemView.cbComplete.isChecked = task.isComplete
             itemView.tvTitle.text = task.title
             itemView.tvDescription.text = task.description
