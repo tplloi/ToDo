@@ -227,7 +227,11 @@ class MainActivity : BaseActivityFont(), NavigationView.OnNavigationItemSelected
     fun showAd() {
         interstitialAd?.let { ad ->
             if (ad.isReady) {
-                ad.showAd()
+                showDialogProgress()
+                setDelay(500.getRandomNumber() + 500) {
+                    hideDialogProgress()
+                    ad.showAd()
+                }
             }
         }
     }

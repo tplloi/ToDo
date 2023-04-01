@@ -67,6 +67,7 @@ class TaskCreateFragment : BaseBottomSheetFragment(
                         task?.let {
                             showToast(getString(R.string.create_successfully))
                             dismiss()
+                            (activity as MainActivity?)?.showAd()
                         }
                     }
                 }
@@ -75,9 +76,7 @@ class TaskCreateFragment : BaseBottomSheetFragment(
     }
 
     private fun showToast(msg: String) {
-        if (activity is MainActivity) {
-            (activity as MainActivity).showShortInformation(msg)
-        }
+        (activity as MainActivity?)?.showShortInformation(msg)
     }
 
     private fun handleCreateTask() {
@@ -94,6 +93,5 @@ class TaskCreateFragment : BaseBottomSheetFragment(
             this.description = description
         }
         mainViewModel?.createTask(task)
-        (activity as MainActivity?)?.showAd()
     }
 }
