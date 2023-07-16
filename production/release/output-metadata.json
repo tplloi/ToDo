@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.roy93group.todo",
+  "variantName": "productionRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 20230715,
+      "versionName": "2023.07.15",
+      "outputFile": "app_release_2023.07.15_20230715.apk"
+    }
+  ],
+  "elementType": "File"
+}
