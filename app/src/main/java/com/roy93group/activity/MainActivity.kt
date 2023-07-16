@@ -20,7 +20,7 @@ import com.loitp.core.ext.*
 import com.roy93group.R
 import com.roy93group.fragment.HomeFragment
 import com.roy93group.fragment.SettingFragment
-import com.roy93group.helper.Applovin
+import com.roy93group.helper.createAdBanner
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.view_drawer_end.*
 import kotlinx.android.synthetic.main.view_drawer_main.*
@@ -55,8 +55,7 @@ class MainActivity : BaseActivityFont(), NavigationView.OnNavigationItemSelected
 
     private fun setupViews() {
         setSupportActionBar(toolbar)
-        adView = Applovin.createAdBanner(
-            a = this,
+        adView = this.createAdBanner(
             logTag = logTag,
             bkgColor = getColor(R.color.colorPrimary),
             viewGroup = flAd,
